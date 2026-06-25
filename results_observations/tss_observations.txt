@@ -1,0 +1,188 @@
+TSS Wild vs Mutant Observations
+
+Where these observations come from
+- compare_mutant_wild/tss/tss_upstream500.comparison_summary.tsv
+- compare_mutant_wild/tss/tss_upstream500.motif_deltas.tsv
+- compare_mutant_wild/tss/tss_upstream500.overall_summary.tsv
+
+High-level summary
+- Total mutant comparisons: 307
+- Mean delta QGRS count: -0.081
+- Mean delta max g-score: -1.41
+- SNPs with higher max g-score: 4
+- SNPs with lower max g-score: 58
+- SNPs with unchanged max g-score: 245
+- SNPs with more QGRS motifs: 1
+- SNPs with fewer QGRS motifs: 26
+- SNPs with unchanged QGRS count: 280
+- SNPs with gained motif instances: 281
+- SNPs with lost motif instances: 307
+- SNPs with top-sequence change: 113
+
+Most common effect classes
+- no_summary_change: 218
+- lower_max_gscore: 58
+- fewer_qgrs_same_max_gscore: 26
+- higher_max_gscore: 4
+- more_qgrs_same_max_gscore: 1
+
+Main interpretation
+- On average, TSS mutant sequences show a decrease in maximum g-score relative to wild type.
+- Many TSS SNPs do not change the top-level summary values, but they still often change motif sequence composition.
+- The balance of effect classes suggests that weakening or preserving QGRS potential is more common than strengthening it in this region.
+
+Examples of the strongest increases in max g-score
+- XPA | variant 9:97697358 | to_G | QGRS count 2 -> 2 (delta 0) | max g-score 36 -> 55 (delta 19) | effect higher_max_gscore | top sequence changed y
+  reference top motif: GGCCGCTGGGTGCGGGGAGCGCAGAGGCGGTGCAGGGCGGCTGG
+  mutant top motif:    GGGTGCGGGGAGCGCAGAGGCGGTGCAGGGCGGCGGG
+- RAF1 | variant 3:12664168 | to_G | QGRS count 3 -> 3 (delta 0) | max g-score 35 -> 53 (delta 18) | effect higher_max_gscore | top sequence changed y
+  reference top motif: GGGGGCGGGG
+  mutant top motif:    GGGGGGACGAGCACCGAGTCGAGGGCTCGCTCGTCTGGG
+- MSH2 | variant 2:47403118 | to_G | QGRS count 5 -> 5 (delta 0) | max g-score 62 -> 67 (delta 5) | effect higher_max_gscore | top sequence changed y
+  reference top motif: GGGGACGTGGGAGGGGAGGCGGG
+  mutant top motif:    GGGGACGTGGGGGGGGAGGCGGGAAACAGCTTAGTGGGTGTGGGG
+- PTEN | variant 10:87863562 | to_G | QGRS count 3 -> 3 (delta 0) | max g-score 58 -> 60 (delta 2) | effect higher_max_gscore | top sequence changed y
+  reference top motif: GGGGGCGGGCAGGCCGGCGGGCGGTGATGTGGCGGG
+  mutant top motif:    GGGGGCGGGCAGGCCGGCGGGCGGTGATGGGG
+
+Examples of the strongest decreases in max g-score
+- CD274 | variant 9:5450497 | from_G | QGRS count 2 -> 2 (delta 0) | max g-score 57 -> 35 (delta -22) | effect lower_max_gscore | top sequence changed y
+  reference top motif: GGGCAGAGGTGGGCGGGACCCCGCCTCCGGG
+  mutant top motif:    GGATTTGCTGCCTTGGGCAGAGGTGGGCGGGACCCCGCCTCCCGG
+- FOXL2 | variant 3:138947407 | from_G | QGRS count 2 -> 2 (delta 0) | max g-score 58 -> 36 (delta -22) | effect lower_max_gscore | top sequence changed y
+  reference top motif: GGGCCCGAGCTTCCTGGGCTTTGGCCGGGTGCGGG
+  mutant top motif:    GGCGGGGGCAGGCCGGTCCAGGCTGTGCGGGG
+- PTEN | variant 10:87863535 | from_G | QGRS count 3 -> 3 (delta 0) | max g-score 58 -> 36 (delta -22) | effect lower_max_gscore | top sequence changed y
+  reference top motif: GGGGGCGGGCAGGCCGGCGGGCGGTGATGTGGCGGG
+  mutant top motif:    GGCTCCCGGCGCGGCGGCGGAGGAGGCGGGCAGGCCGG
+- PTEN | variant 10:87863535 | from_G | QGRS count 3 -> 3 (delta 0) | max g-score 58 -> 36 (delta -22) | effect lower_max_gscore | top sequence changed y
+  reference top motif: GGGGGCGGGCAGGCCGGCGGGCGGTGATGTGGCGGG
+  mutant top motif:    GGCTCCCGGCGCGGCGGCGGAGGCGGCGGGCAGGCCGG
+- PTEN | variant 10:87863539 | from_G | QGRS count 3 -> 3 (delta 0) | max g-score 58 -> 36 (delta -22) | effect lower_max_gscore | top sequence changed y
+  reference top motif: GGGGGCGGGCAGGCCGGCGGGCGGTGATGTGGCGGG
+  mutant top motif:    GGGCTCCCGGCGCGGCGGCGGAGGGG
+- PTEN | variant 10:87863539 | from_G | QGRS count 3 -> 3 (delta 0) | max g-score 58 -> 36 (delta -22) | effect lower_max_gscore | top sequence changed y
+  reference top motif: GGGGGCGGGCAGGCCGGCGGGCGGTGATGTGGCGGG
+  mutant top motif:    GGGCTCCCGGCGCGGCGGCGGAGGGG
+- PTEN | variant 10:87863540 | from_G | QGRS count 3 -> 3 (delta 0) | max g-score 58 -> 36 (delta -22) | effect lower_max_gscore | top sequence changed y
+  reference top motif: GGGGGCGGGCAGGCCGGCGGGCGGTGATGTGGCGGG
+  mutant top motif:    GGGCTCCCGGCGCGGCGGCGGAGGGG
+- PTEN | variant 10:87863551 | from_G | QGRS count 3 -> 3 (delta 0) | max g-score 58 -> 36 (delta -22) | effect lower_max_gscore | top sequence changed y
+  reference top motif: GGGGGCGGGCAGGCCGGCGGGCGGTGATGTGGCGGG
+  mutant top motif:    GGGCTCCCGGCGCGGCGGCGGAGGGG
+- PTEN | variant 10:87863552 | from_G | QGRS count 3 -> 3 (delta 0) | max g-score 58 -> 36 (delta -22) | effect lower_max_gscore | top sequence changed y
+  reference top motif: GGGGGCGGGCAGGCCGGCGGGCGGTGATGTGGCGGG
+  mutant top motif:    GGGCTCCCGGCGCGGCGGCGGAGGGG
+- PTEN | variant 10:87863552 | from_G | QGRS count 3 -> 3 (delta 0) | max g-score 58 -> 36 (delta -22) | effect lower_max_gscore | top sequence changed y
+  reference top motif: GGGGGCGGGCAGGCCGGCGGGCGGTGATGTGGCGGG
+  mutant top motif:    GGGCTCCCGGCGCGGCGGCGGAGGGG
+
+Examples where QGRS count changed
+- DDX3X | variant X:41333711 | from_G | QGRS count 4 -> 3 (delta -1) | max g-score 53 -> 53 (delta 0) | effect fewer_qgrs_same_max_gscore | top sequence changed n
+- MLH1 | variant 3:36993318 | from_G | QGRS count 4 -> 3 (delta -1) | max g-score 35 -> 35 (delta 0) | effect fewer_qgrs_same_max_gscore | top sequence changed n
+- MLH1 | variant 3:36993319 | from_G | QGRS count 4 -> 3 (delta -1) | max g-score 35 -> 35 (delta 0) | effect fewer_qgrs_same_max_gscore | top sequence changed n
+- MLH1 | variant 3:36993325 | from_G | QGRS count 4 -> 3 (delta -1) | max g-score 35 -> 35 (delta 0) | effect fewer_qgrs_same_max_gscore | top sequence changed n
+- MLH1 | variant 3:36993325 | from_G | QGRS count 4 -> 3 (delta -1) | max g-score 35 -> 35 (delta 0) | effect fewer_qgrs_same_max_gscore | top sequence changed n
+- MLH1 | variant 3:36993342 | from_G | QGRS count 4 -> 3 (delta -1) | max g-score 35 -> 35 (delta 0) | effect fewer_qgrs_same_max_gscore | top sequence changed n
+- MLH1 | variant 3:36993346 | from_G | QGRS count 4 -> 3 (delta -1) | max g-score 35 -> 35 (delta 0) | effect fewer_qgrs_same_max_gscore | top sequence changed n
+- MSH2 | variant 2:47402875 | from_G | QGRS count 5 -> 4 (delta -1) | max g-score 62 -> 62 (delta 0) | effect fewer_qgrs_same_max_gscore | top sequence changed n
+- MSH2 | variant 2:47402876 | from_G | QGRS count 5 -> 4 (delta -1) | max g-score 62 -> 62 (delta 0) | effect fewer_qgrs_same_max_gscore | top sequence changed n
+- MSH2 | variant 2:47402876 | from_G | QGRS count 5 -> 4 (delta -1) | max g-score 62 -> 62 (delta 0) | effect fewer_qgrs_same_max_gscore | top sequence changed n
+- MSH2 | variant 2:47402877 | from_G | QGRS count 5 -> 4 (delta -1) | max g-score 62 -> 62 (delta 0) | effect fewer_qgrs_same_max_gscore | top sequence changed n
+- MSH2 | variant 2:47402878 | from_G | QGRS count 5 -> 4 (delta -1) | max g-score 62 -> 62 (delta 0) | effect fewer_qgrs_same_max_gscore | top sequence changed n
+
+Examples where all QGRS motifs were lost
+- No complete QGRS-loss cases were observed.
+
+Examples where extra QGRS motifs appeared
+- VHL | variant 3:10141653 | from_G | QGRS count 3 -> 4 (delta 1) | max g-score 34 -> 34 (delta 0) | effect more_qgrs_same_max_gscore | top sequence changed n
+
+Examples where summary metrics stayed the same but the top motif changed
+- APC | variant 5:112737652 | from_G | QGRS count 1 -> 1 (delta 0) | max g-score 72 -> 72 (delta 0) | effect no_summary_change | top sequence changed y
+  reference top motif: GGGGACTGGGGCCGCGAGGGCATACCCCCGAGGGGTACGGGG
+  mutant top motif:    GGGGACTGGGGCCACGAGGGCATACCCCCGAGGGGTACGGGG
+- APC | variant 5:112737668 | from_G | QGRS count 1 -> 1 (delta 0) | max g-score 72 -> 72 (delta 0) | effect no_summary_change | top sequence changed y
+  reference top motif: GGGGACTGGGGCCGCGAGGGCATACCCCCGAGGGGTACGGGG
+  mutant top motif:    GGGGACTGGGGCCGCGAGGGCATACCCCCTAGGGGTACGGGG
+- ATM | variant 11:108222819 | from_G | QGRS count 2 -> 2 (delta 0) | max g-score 63 -> 63 (delta 0) | effect no_summary_change | top sequence changed y
+  reference top motif: GGGATGAGGAGGGCGGGGAGGACGACGAGGGCGAAGAGGGTGGG
+  mutant top motif:    GGGATGAGGAGGGCGGGGAGGACGACGAGGGCGAAGAGGATGGG
+- BMPR1A | variant 10:86756311 | from_G | QGRS count 3 -> 3 (delta 0) | max g-score 63 -> 63 (delta 0) | effect no_summary_change | top sequence changed y
+  reference top motif: GGGAAGCTACCCGGGCGGCAGCTGTGGGGCTGGCTTGTGGG
+  mutant top motif:    GGGCGGCAGCTGTGGGGCTGGCTTGTTGGGAGGGGCCGGCGGG
+- BRIP1 | variant 17:61863560 | from_G | QGRS count 1 -> 1 (delta 0) | max g-score 62 -> 62 (delta 0) | effect no_summary_change | top sequence changed y
+  reference top motif: GGGCTATTGGGCGCTGGGAGTCGAGGGG
+  mutant top motif:    GGGCGCTGGGAGTCGAGGGGGCGGG
+- CNTNAP2 | variant 7:146116731 | from_G | QGRS count 3 -> 3 (delta 0) | max g-score 57 -> 57 (delta 0) | effect no_summary_change | top sequence changed y
+  reference top motif: GGGGGGTGAGGGGAGAAGAGGAAGCGGGAGGGG
+  mutant top motif:    GGGGGTGAGGGGAGAAGAGGAAGCGGGAGGGG
+- CNTNAP2 | variant 7:146116732 | from_G | QGRS count 3 -> 3 (delta 0) | max g-score 57 -> 57 (delta 0) | effect no_summary_change | top sequence changed y
+  reference top motif: GGGGGGTGAGGGGAGAAGAGGAAGCGGGAGGGG
+  mutant top motif:    GGGGTGAGGGGAGAAGAGGAAGCGGGAGGGG
+- ERCC3 | variant 2:127294179 | to_G | QGRS count 2 -> 2 (delta 0) | max g-score 35 -> 35 (delta 0) | effect no_summary_change | top sequence changed y
+  reference top motif: GGACAACAGGGAGCTTCCGGATTGAGCCGG
+  mutant top motif:    GGACAGCAGGGAGCTTCCGGATTGAGCCGG
+- FANCG | variant 9:35080012 | from_G | QGRS count 3 -> 3 (delta 0) | max g-score 36 -> 36 (delta 0) | effect no_summary_change | top sequence changed y
+  reference top motif: GGTGGAAGCGGGAACCCAGGAGGACCTGG
+  mutant top motif:    GGTGGAAGCGGGAACCCAGGAAGACCTGG
+- HRAS | variant 11:535649 | from_G | QGRS count 2 -> 2 (delta 0) | max g-score 56 -> 56 (delta 0) | effect no_summary_change | top sequence changed y
+  reference top motif: GGGCCGCTCAGCCAACCGGGGTGGGGCGGGG
+  mutant top motif:    GGGCCGCTCAGCCAACCGGGGTGGGACGGGG
+
+Examples of any top-sequence changes
+- CD274 | variant 9:5450497 | from_G | QGRS count 2 -> 2 (delta 0) | max g-score 57 -> 35 (delta -22) | effect lower_max_gscore | top sequence changed y
+  reference top motif: GGGCAGAGGTGGGCGGGACCCCGCCTCCGGG
+  mutant top motif:    GGATTTGCTGCCTTGGGCAGAGGTGGGCGGGACCCCGCCTCCCGG
+- FOXL2 | variant 3:138947407 | from_G | QGRS count 2 -> 2 (delta 0) | max g-score 58 -> 36 (delta -22) | effect lower_max_gscore | top sequence changed y
+  reference top motif: GGGCCCGAGCTTCCTGGGCTTTGGCCGGGTGCGGG
+  mutant top motif:    GGCGGGGGCAGGCCGGTCCAGGCTGTGCGGGG
+- PTEN | variant 10:87863535 | from_G | QGRS count 3 -> 3 (delta 0) | max g-score 58 -> 36 (delta -22) | effect lower_max_gscore | top sequence changed y
+  reference top motif: GGGGGCGGGCAGGCCGGCGGGCGGTGATGTGGCGGG
+  mutant top motif:    GGCTCCCGGCGCGGCGGCGGAGGAGGCGGGCAGGCCGG
+- PTEN | variant 10:87863535 | from_G | QGRS count 3 -> 3 (delta 0) | max g-score 58 -> 36 (delta -22) | effect lower_max_gscore | top sequence changed y
+  reference top motif: GGGGGCGGGCAGGCCGGCGGGCGGTGATGTGGCGGG
+  mutant top motif:    GGCTCCCGGCGCGGCGGCGGAGGCGGCGGGCAGGCCGG
+- PTEN | variant 10:87863539 | from_G | QGRS count 3 -> 3 (delta 0) | max g-score 58 -> 36 (delta -22) | effect lower_max_gscore | top sequence changed y
+  reference top motif: GGGGGCGGGCAGGCCGGCGGGCGGTGATGTGGCGGG
+  mutant top motif:    GGGCTCCCGGCGCGGCGGCGGAGGGG
+- PTEN | variant 10:87863539 | from_G | QGRS count 3 -> 3 (delta 0) | max g-score 58 -> 36 (delta -22) | effect lower_max_gscore | top sequence changed y
+  reference top motif: GGGGGCGGGCAGGCCGGCGGGCGGTGATGTGGCGGG
+  mutant top motif:    GGGCTCCCGGCGCGGCGGCGGAGGGG
+- PTEN | variant 10:87863540 | from_G | QGRS count 3 -> 3 (delta 0) | max g-score 58 -> 36 (delta -22) | effect lower_max_gscore | top sequence changed y
+  reference top motif: GGGGGCGGGCAGGCCGGCGGGCGGTGATGTGGCGGG
+  mutant top motif:    GGGCTCCCGGCGCGGCGGCGGAGGGG
+- PTEN | variant 10:87863551 | from_G | QGRS count 3 -> 3 (delta 0) | max g-score 58 -> 36 (delta -22) | effect lower_max_gscore | top sequence changed y
+  reference top motif: GGGGGCGGGCAGGCCGGCGGGCGGTGATGTGGCGGG
+  mutant top motif:    GGGCTCCCGGCGCGGCGGCGGAGGGG
+- PTEN | variant 10:87863552 | from_G | QGRS count 3 -> 3 (delta 0) | max g-score 58 -> 36 (delta -22) | effect lower_max_gscore | top sequence changed y
+  reference top motif: GGGGGCGGGCAGGCCGGCGGGCGGTGATGTGGCGGG
+  mutant top motif:    GGGCTCCCGGCGCGGCGGCGGAGGGG
+- PTEN | variant 10:87863552 | from_G | QGRS count 3 -> 3 (delta 0) | max g-score 58 -> 36 (delta -22) | effect lower_max_gscore | top sequence changed y
+  reference top motif: GGGGGCGGGCAGGCCGGCGGGCGGTGATGTGGCGGG
+  mutant top motif:    GGGCTCCCGGCGCGGCGGCGGAGGGG
+- PTEN | variant 10:87863552 | from_G | QGRS count 3 -> 3 (delta 0) | max g-score 58 -> 36 (delta -22) | effect lower_max_gscore | top sequence changed y
+  reference top motif: GGGGGCGGGCAGGCCGGCGGGCGGTGATGTGGCGGG
+  mutant top motif:    GGGCTCCCGGCGCGGCGGCGGAGGGG
+- PTEN | variant 10:87863553 | from_G | QGRS count 3 -> 3 (delta 0) | max g-score 58 -> 36 (delta -22) | effect lower_max_gscore | top sequence changed y
+  reference top motif: GGGGGCGGGCAGGCCGGCGGGCGGTGATGTGGCGGG
+  mutant top motif:    GGGCTCCCGGCGCGGCGGCGGAGGGG
+
+Genes with the largest cumulative absolute max g-score shifts
+- PTEN: total absolute delta max g-score = 309.0 across 60 SNP-mutant comparisons
+- MSH2: total absolute delta max g-score = 23.0 across 61 SNP-mutant comparisons
+- CD274: total absolute delta max g-score = 22.0 across 1 SNP-mutant comparisons
+- FOXL2: total absolute delta max g-score = 22.0 across 1 SNP-mutant comparisons
+- XPA: total absolute delta max g-score = 19.0 across 1 SNP-mutant comparisons
+- RAF1: total absolute delta max g-score = 18.0 across 1 SNP-mutant comparisons
+- STK11: total absolute delta max g-score = 18.0 across 1 SNP-mutant comparisons
+- MEN1: total absolute delta max g-score = 17.0 across 3 SNP-mutant comparisons
+- XPC: total absolute delta max g-score = 16.0 across 1 SNP-mutant comparisons
+- CTNNA1: total absolute delta max g-score = 11.0 across 1 SNP-mutant comparisons
+- CNTNAP2: total absolute delta max g-score = 7.0 across 5 SNP-mutant comparisons
+- EXT2: total absolute delta max g-score = 6.0 across 1 SNP-mutant comparisons
+
+How to use this file
+- Use this document as a readable interpretation layer for the TSS wild-vs-mutant comparison tables.
+- The comparison_summary file is best for per-SNP summary effects.
+- The motif_deltas file is best for exact motif gain/loss details.
+- The overall_summary file is best for headline statistics.

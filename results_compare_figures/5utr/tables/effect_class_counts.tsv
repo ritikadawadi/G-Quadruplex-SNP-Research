@@ -1,0 +1,8 @@
+EFFECT_CLASS	count
+no_summary_change	244
+lower_max_gscore	95
+qgrs_lost_all	30
+higher_max_gscore	18
+fewer_qgrs_same_max_gscore	17
+fewer_qgrs_lower_max_gscore	1
+more_qgrs_same_max_gscore	1

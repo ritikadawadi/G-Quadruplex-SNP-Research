@@ -1,0 +1,104 @@
+================================================================================
+CASE EXAMPLE 1 — 5′UTR
+================================================================================
+
+MSH2 | G>C | ClinVar:182605 | chr2:47403183 ( 5′ UTR )
+COSMIC role: TSG (tumour suppressor gene)
+Disease: Lynch syndrome / Hereditary nonpolyposis colorectal cancer
+ClinSig: Conflicting classifications of pathogenicity
+G-change class: from_G
+
+WT  G-score: 34 | QGRS count: 1 | Sequence:
+...GCATTTTCTTCAACCAGGAGGTGAGGA[G]GTTTCGAC...
+
+MUT G-score: 0  | QGRS count: 0 | Sequence:
+...GCATTTTCTTCAACCAGGAGGTGAGGA[C]GTTTCGAC...
+
+ΔG-score: -34
+ΔQGRS count: -1
+Effect: Complete G4 motif loss (qgrs_lost_all)
+
+WT top QGRS (pos 17–29, contains the variant):
+...GCATTTTCTTCAACCA[GGAGGTGAGGAGG]TTTCGAC...
+
+MUT top QGRS: —  (no motif predicted; G4 completely destroyed)
+
+Interpretation: A single G>C substitution in the 5′UTR of MSH2 falls
+inside the only predicted G4 motif, breaking a critical G-run and
+eliminating it entirely (G-score 34 → 0). MSH2 is a key mismatch-repair
+tumour suppressor; loss of a regulatory G4 in its 5′UTR could alter
+translational control.
+
+
+================================================================================
+CASE EXAMPLE 2 — 3′UTR
+================================================================================
+
+SMAD3 | G>T | ClinVar:316878 | chr15:67191109 ( 3′ UTR )
+COSMIC role: TSG (tumour suppressor gene)
+Disease: Loeys-Dietz syndrome / Familial thoracic aortic aneurysm
+ClinSig: Uncertain significance
+G-change class: from_G
+
+WT  G-score: 63 | QGRS count: 21 | Sequence:
+...CCCCTTGTGAGCTGGATAGACTTGGGATGGGGAGG[G]AGGGAGTTTTGTCTGTCTCCCTCCCCTCTCAGAAC...
+
+MUT G-score: 36 | QGRS count: 21 | Sequence:
+...CCCCTTGTGAGCTGGATAGACTTGGGATGGGGAGG[T]AGGGAGTTTTGTCTGTCTCCCTCCCCTCTCAGAAC...
+
+ΔG-score: -27
+ΔQGRS count: 0
+Effect: G4 score weakened, motif retained (lower_max_gscore)
+
+WT top QGRS (pos 564–580, overlaps variant):
+...GACCTTGCCCCTTGTGAGCTGGATAGACTT[GGGATGGGGAGGGAGGG]AGTTTTGTCTGTCTCCCTCCCCTCTCAGAA...
+
+MUT top QGRS (pos 3847–3877, different location — 3,271 bp from variant):
+...AAAATGATGATGAAGCATCTCCCATGGGGA[GGTGATGGTGGGGAGATGATGGGCTAAACAGG]CAACTTTTCAAAAACACAGCTATCATAGAA...
+
+Note: The G>T mutation disrupts the strong G4 near the variant site. The
+new "top" motif is a weaker QGRS elsewhere in the 3′UTR that was always
+present but is now the highest-scoring one by default.
+
+Interpretation: A single G>T substitution in the 3′UTR of SMAD3 nearly
+halves the top predicted G4 score (63 → 36) without changing the total
+number of QGRS motifs. The variant sits within the wild-type top motif,
+breaking its G-run pattern and causing a distant, weaker motif to become
+the new highest-scoring QGRS. SMAD3 is a TGF-β signalling tumour
+suppressor; weakening a regulatory G4 in its 3′UTR could affect mRNA
+stability or localisation.
+
+
+================================================================================
+CASE EXAMPLE 3 — 3′UTR  (same-region motif change)
+================================================================================
+
+COL1A1 | G>A | ClinVar:889153 | chr17:50184665 ( 3′ UTR )
+COSMIC role: fusion
+Disease: Osteogenesis imperfecta / Ehlers-Danlos syndrome / Infantile cortical hyperostosis
+ClinSig: Uncertain significance
+G-change class: from_G
+
+WT  G-score: 79 | QGRS count: 6 | Sequence:
+...GTCTTGATGTGTCACCGGGGCAACTGCCTGGGGGC[G]GGGATGGGGGCAGGGTGGAAGCGGCTCCCCATTTT...
+
+MUT G-score: 64 | QGRS count: 6 | Sequence:
+...GTCTTGATGTGTCACCGGGGCAACTGCCTGGGGGC[A]GGGATGGGGGCAGGGTGGAAGCGGCTCCCCATTTT...
+
+ΔG-score: -15
+ΔQGRS count: 0
+Effect: G4 score weakened, motif retained (lower_max_gscore)
+
+WT top QGRS (pos 821–849, contains the variant):
+...CTCGTTCTTGTCTTGATGTGTCACC[GGGGCAACTGCCTGGGGGCGGGGATGGGG]GCAGGGTGGAAGCGGCTCCCCATTT...
+
+MUT top QGRS (pos 835–855, same region — only 5 bp from variant):
+...GATGTGTCACCGGGGCAACTGCCTG[GGGGCAGGGATGGGGGCAGGG]TGGAAGCGGCTCCCCATTTTATACC...
+
+Interpretation: A single G>A substitution in the 3′UTR of COL1A1 sits
+inside the wild-type top G4 motif, breaking one of its G-runs. The motif
+shrinks from a 29-nt structure (G-score 79) to a shorter 21-nt motif
+(G-score 64) in the same region, just 5 bp away. Unlike the SMAD3
+example, the strongest motif stays local rather than jumping to a distant
+site. COL1A1 is a collagen gene associated with connective-tissue
+disorders; weakening a 3′UTR G4 could affect mRNA regulation.

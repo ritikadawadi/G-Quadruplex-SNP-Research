@@ -1,0 +1,37 @@
+GENE	COSMIC_ROLE	CLINSIG	CLNDN	SUM_POS	SUM_NEG	N_SNV	REF_QGRS	QGRS_WITH_SNP	TOTAL_ABS
+PTEN	TSG	"Uncertain significance (52)
+Conflicting classifications of pathogeni… (3)
+Likely pathogenic (2)
++2 more"	"• Hereditary cancer-predisposing syndrome
+• PTEN hamartoma tumor syndrome
+• PTEN-related disorder
+• Glioma susceptibility 2
+• Familial meningioma
+• (+5 other terms)"	2.0	-307.0	60	3	3	309.0
+MSH2	TSG	"Uncertain significance (57)
+Conflicting classifications of pathogeni… (4)"	"• Hereditary cancer-predisposing syndrome
+• Hereditary nonpolyposis colorectal neoplasms
+• Lynch syndrome 1
+• MSH2-related disorder
+• Lynch syndrome
+• (+4 other terms)"	5.0	-18.0	61	5	4	23.0
+CD274	TSG, fusion	Benign (1)	—	0.0	-22.0	1	2	1	22.0
+FOXL2	oncogene, TSG	Uncertain significance (1)	—	0.0	-22.0	1	2	1	22.0
+XPA	TSG	Uncertain significance (1)	• Xeroderma pigmentosum group A	19.0	0.0	1	2	1	19.0
+RAF1	oncogene, fusion	Likely benign (1)	—	18.0	0.0	1	3	1	18.0
+STK11	TSG	Likely benign (1)	—	0.0	-18.0	1	2	1	18.0
+MEN1	TSG	"Uncertain significance (2)
+Likely benign (1)"	"• Hyperparathyroidism
+• Multiple endocrine neoplasia
+• type 1"	0.0	-17.0	3	2	2	17.0
+XPC	TSG	Benign (1)	—	0.0	-16.0	1	2	1	16.0
+CTNNA1	TSG, fusion	Benign (1)	—	0.0	-11.0	1	2	1	11.0
+CNTNAP2	TSG	"Uncertain significance (4)
+Benign (1)"	"• Pitt-Hopkins-like syndrome
+• Cortical dysplasia-focal epilepsy syndrome"	0.0	-7.0	5	3	2	7.0
+EXT2	TSG	Uncertain significance (1)	"• Exostoses
+• multiple
+• type 2"	0.0	-6.0	1	2	1	6.0
+FGFR2	oncogene, fusion	Benign (1)	—	0.0	-4.0	1	2	1	4.0
+AXIN2	TSG	Likely benign (1)	—	0.0	-3.0	1	1	1	3.0
+EP300	TSG, fusion	Likely benign (1)	—	0.0	-3.0	1	2	1	3.0

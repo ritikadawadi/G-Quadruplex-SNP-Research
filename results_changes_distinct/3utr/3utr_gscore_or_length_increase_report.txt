@@ -1,0 +1,404 @@
+====================================================================================================
+QGRS DISTINCT CHANGE REPORT - 3'UTR
+====================================================================================================
+
+Total qualifying variants: 36
+Unique genes: 27
+Rule: include cases where mutant max g-score > wild max g-score OR mutant top QGRS length > wild top QGRS length.
+
+ANK1 | A>C | ClinVar:899559 | chr8:41655412
+WT  G-score: 58 | QGRS length: 37 | Sequence: ...AATGAGGGCTTTTTGTGGCTGGGGATGGGTTTTGG[T]TTTGGGGTTTTTTTTTTAAATTGTTTTGACTTCGT...
+MUT G-score: 63 | QGRS length: 23 | Sequence: ...AATGAGGGCTTTTTGTGGCTGGGGATGGGTTTTGG[G]TTTGGGGTTTTTTTTTTAAATTGTTTTGACTTCGT...
+ΔG-score: 5
+ΔQGRS length: -14
+Reason included: g-score increase
+G-change class: to_G
+WT top QGRS:  GGGCTTTTTGTGGCTGGGGATGGGTTTTGGTTTTGGG
+MUT top QGRS: GGGGATGGGTTTTGGGTTTGGGG
+----------------------------------------------------------------------------------------------------
+
+AXIN1 | C>T | ClinVar:3516884 | chr16:288114
+WT  G-score: 36 | QGRS length: 14 | Sequence: TGATAGGCTG[G]TGGGCTGGCCGCTGTGCCAGGCGAGGCCCTTGGCG...
+MUT G-score: 35 | QGRS length: 39 | Sequence: TGATAGGCTG[A]TGGGCTGGCCGCTGTGCCAGGCGAGGCCCTTGGCG...
+ΔG-score: -1
+ΔQGRS length: 25
+Reason included: QGRS length increase
+G-change class: from_G
+WT top QGRS:  GGCTGGTGGGCTGG
+MUT top QGRS: GGCTGATGGGCTGGCCGCTGTGCCAGGCGAGGCCCTTGG
+----------------------------------------------------------------------------------------------------
+
+AXIN2 | C>T | ClinVar:339833 | chr17:65529820
+WT  G-score: 63 | QGRS length: 14 | Sequence: ...TAAGGAAGAATCGGCCAGTGGGCCTTCGGGAGGGC[G]GGGGGAGGTTGATTTTCATGATTCATGAGCTGGGT...
+MUT G-score: 61 | QGRS length: 22 | Sequence: ...TAAGGAAGAATCGGCCAGTGGGCCTTCGGGAGGGC[A]GGGGGAGGTTGATTTTCATGATTCATGAGCTGGGT...
+ΔG-score: -2
+ΔQGRS length: 8
+Reason included: QGRS length increase
+G-change class: from_G
+WT top QGRS:  GGGAGGGCGGGGGG
+MUT top QGRS: GGGCCTTCGGGAGGGCAGGGGG
+----------------------------------------------------------------------------------------------------
+
+BAP1 | C>A | ClinVar:295536 | chr3:52401803
+WT  G-score: 62 | QGRS length: 33 | Sequence: ...ACAGGGTCCTAGCTGGGGGCCTGGGTGGGCCCTGG[G]CTCTGGGCCCTGCTGCTCTAGCCCCAGCCACCAGC...
+MUT G-score: 62 | QGRS length: 40 | Sequence: ...ACAGGGTCCTAGCTGGGGGCCTGGGTGGGCCCTGG[T]CTCTGGGCCCTGCTGCTCTAGCCCCAGCCACCAGC...
+ΔG-score: 0
+ΔQGRS length: 7
+Reason included: QGRS length increase
+G-change class: from_G
+WT top QGRS:  GGGTCCTAGCTGGGGGCCTGGGTGGGCCCTGGG
+MUT top QGRS: GGGTCCTAGCTGGGGGCCTGGGTGGGCCCTGGTCTCTGGG
+----------------------------------------------------------------------------------------------------
+
+BRCA1 | C>T | ClinVar:3517259 | chr17:43044886
+WT  G-score: 36 | QGRS length: 11 | Sequence: ...TAAGGCAGGAGAATCACTTCAGCCCGGGAGGTGGA[G]GTTGCAGTGAGCCAAGATCATACCACGGCACTCCA...
+MUT G-score: 34 | QGRS length: 36 | Sequence: ...TAAGGCAGGAGAATCACTTCAGCCCGGGAGGTGGA[A]GTTGCAGTGAGCCAAGATCATACCACGGCACTCCA...
+ΔG-score: -2
+ΔQGRS length: 25
+Reason included: QGRS length increase
+G-change class: from_G
+WT top QGRS:  GGAGGTGGAGG
+MUT top QGRS: GGCTGTTGTTGGCTTAGGGCTGGAAGCACAGAGTGG
+----------------------------------------------------------------------------------------------------
+
+BTG2 | G>A | ClinVar:4461751 | chr1:203308117
+WT  G-score: 60 | QGRS length: 26 | Sequence: ...TTCCAGCCAGGAATCTAAAGCTTTGGGTTTTCTGA[G]GGGGGGGAGGAGGGAACTGGAGGTTATTGGGGTTA...
+MUT G-score: 60 | QGRS length: 43 | Sequence: ...TTCCAGCCAGGAATCTAAAGCTTTGGGTTTTCTGA[A]GGGGGGGAGGAGGGAACTGGAGGTTATTGGGGTTA...
+ΔG-score: 0
+ΔQGRS length: 17
+Reason included: QGRS length increase
+G-change class: from_G
+WT top QGRS:  GGGTTTTCTGAGGGGGGGGAGGAGGG
+MUT top QGRS: GGGTTTTCTGAAGGGGGGGAGGAGGGAACTGGAGGTTATTGGG
+----------------------------------------------------------------------------------------------------
+
+CDH1 | C>G | ClinVar:618519 | chr16:68833515
+WT  G-score: 34 | QGRS length: 33 | Sequence: TAGGGGACTCGAGAGAGG[C]GGGCCCCAGACCCATGTGCTGGGAAATGCAGAAAT...
+MUT G-score: 52 | QGRS length: 40 | Sequence: TAGGGGACTCGAGAGAGG[G]GGGCCCCAGACCCATGTGCTGGGAAATGCAGAAAT...
+ΔG-score: 18
+ΔQGRS length: 7
+Reason included: g-score increase, QGRS length increase
+G-change class: to_G
+WT top QGRS:  GGCCCTAAAGGGGGTTAGTTGAGGGGTAGGGGG
+MUT top QGRS: GGGGACTCGAGAGAGGGGGGCCCCAGACCCATGTGCTGGG
+----------------------------------------------------------------------------------------------------
+
+CDH1 | G>C | ClinVar:335853 | chr16:68835161
+WT  G-score: 34 | QGRS length: 33 | Sequence: ...TCCAAATTTTTTTCTTAGGAGCAAGAAGAAAATGT[G]GCCCTAAAGGGGGTTAGTTGAGGGGTAGGGGGTAG...
+MUT G-score: 34 | QGRS length: 44 | Sequence: ...TCCAAATTTTTTTCTTAGGAGCAAGAAGAAAATGT[C]GCCCTAAAGGGGGTTAGTTGAGGGGTAGGGGGTAG...
+ΔG-score: 0
+ΔQGRS length: 11
+Reason included: QGRS length increase
+G-change class: from_G
+WT top QGRS:  GGCCCTAAAGGGGGTTAGTTGAGGGGTAGGGGG
+MUT top QGRS: GGGGGTTAGTTGAGGGGTAGGGGGTAGTGAGGATCTTGATTTGG
+----------------------------------------------------------------------------------------------------
+
+CDH1 | G>T | ClinVar:335854 | chr16:68835192
+WT  G-score: 34 | QGRS length: 33 | Sequence: ...ATGTGGCCCTAAAGGGGGTTAGTTGAGGGGTAGGG[G]GTAGTGAGGATCTTGATTTGGATCTCTTTTTATTT...
+MUT G-score: 34 | QGRS length: 41 | Sequence: ...ATGTGGCCCTAAAGGGGGTTAGTTGAGGGGTAGGG[T]GTAGTGAGGATCTTGATTTGGATCTCTTTTTATTT...
+ΔG-score: 0
+ΔQGRS length: 8
+Reason included: QGRS length increase
+G-change class: from_G
+WT top QGRS:  GGCCCTAAAGGGGGTTAGTTGAGGGGTAGGGGG
+MUT top QGRS: GGCCCTAAAGGGGGTTAGTTGAGGGGTAGGGTGTAGTGAGG
+----------------------------------------------------------------------------------------------------
+
+DCTN1 | A>C | ClinVar:287953 | chr2:74361248
+WT  G-score: 60 | QGRS length: 23 | Sequence: ...ACTGCTCCCTCCTTCCTGAGGGGCCTCAGGGCTTG[T]GGGGGGTAGGCTGAGACCCCACCACCAAAGGTTAA...
+MUT G-score: 62 | QGRS length: 22 | Sequence: ...ACTGCTCCCTCCTTCCTGAGGGGCCTCAGGGCTTG[G]GGGGGGTAGGCTGAGACCCCACCACCAAAGGTTAA...
+ΔG-score: 2
+ΔQGRS length: -1
+Reason included: g-score increase
+G-change class: to_G
+WT top QGRS:  GGGGCCTCAGGGCTTGTGGGGGG
+MUT top QGRS: GGGCCTCAGGGCTTGGGGGGGG
+----------------------------------------------------------------------------------------------------
+
+FANCA | G>C | ClinVar:3360627 | chr16:89738157
+WT  G-score: 58 | QGRS length: 35 | Sequence: ...TGGCCCAGGTGGTGGTTCCGCCTCCAGGGGCAGGG[C]CTTGTCCTGGGTCTGTGTCAGCGGGTGCACCATGG...
+MUT G-score: 59 | QGRS length: 35 | Sequence: ...TGGCCCAGGTGGTGGTTCCGCCTCCAGGGGCAGGG[G]CTTGTCCTGGGTCTGTGTCAGCGGGTGCACCATGG...
+ΔG-score: 1
+ΔQGRS length: 0
+Reason included: g-score increase
+G-change class: to_G
+WT top QGRS:  GGGGCAGGGCCTTGTCCTGGGTCTGTGTCAGCGGG
+MUT top QGRS: GGGGCAGGGGCTTGTCCTGGGTCTGTGTCAGCGGG
+----------------------------------------------------------------------------------------------------
+
+FANCI | A>G | ClinVar:374451 | chr15:89316747
+WT  G-score: 32 | QGRS length: 39 | Sequence: ...GAAGCTCCACGGGAGCAAATACAGAGCCTCCAGGC[A]GTGCTATGGTCCAGGCTGGCTTCGTTTTTCCAAGG...
+MUT G-score: 33 | QGRS length: 20 | Sequence: ...GAAGCTCCACGGGAGCAAATACAGAGCCTCCAGGC[G]GTGCTATGGTCCAGGCTGGCTTCGTTTTTCCAAGG...
+ΔG-score: 1
+ΔQGRS length: -19
+Reason included: g-score increase
+G-change class: to_G
+WT top QGRS:  GGCAGTGCTATGGTCCAGGCTGGCTTCGTTTTTCCAAGG
+MUT top QGRS: GGTGCTATGGTCCAGGCTGG
+----------------------------------------------------------------------------------------------------
+
+FANCI | C>G | ClinVar:1347886 | chr15:89316751
+WT  G-score: 32 | QGRS length: 39 | Sequence: ...CTCCACGGGAGCAAATACAGAGCCTCCAGGCAGTG[C]TATGGTCCAGGCTGGCTTCGTTTTTCCAAGGAGCC...
+MUT G-score: 35 | QGRS length: 19 | Sequence: ...CTCCACGGGAGCAAATACAGAGCCTCCAGGCAGTG[G]TATGGTCCAGGCTGGCTTCGTTTTTCCAAGGAGCC...
+ΔG-score: 3
+ΔQGRS length: -20
+Reason included: g-score increase
+G-change class: to_G
+WT top QGRS:  GGCAGTGCTATGGTCCAGGCTGGCTTCGTTTTTCCAAGG
+MUT top QGRS: GGCAGTGGTATGGTCCAGG
+----------------------------------------------------------------------------------------------------
+
+FANCI | C>G | ClinVar:1329923 | chr15:89316770
+WT  G-score: 32 | QGRS length: 39 | Sequence: ...GAGCCTCCAGGCAGTGCTATGGTCCAGGCTGGCTT[C]GTTTTTCCAAGGAGCCTTTGGTGAGTTCAATTATC...
+MUT G-score: 34 | QGRS length: 17 | Sequence: ...GAGCCTCCAGGCAGTGCTATGGTCCAGGCTGGCTT[G]GTTTTTCCAAGGAGCCTTTGGTGAGTTCAATTATC...
+ΔG-score: 2
+ΔQGRS length: -22
+Reason included: g-score increase
+G-change class: to_G
+WT top QGRS:  GGCAGTGCTATGGTCCAGGCTGGCTTCGTTTTTCCAAGG
+MUT top QGRS: GGTCCAGGCTGGCTTGG
+----------------------------------------------------------------------------------------------------
+
+FANCI | T>G | ClinVar:2903426 | chr15:89316772
+WT  G-score: 32 | QGRS length: 39 | Sequence: ...GCCTCCAGGCAGTGCTATGGTCCAGGCTGGCTTCG[T]TTTTCCAAGGAGCCTTTGGTGAGTTCAATTATCTG...
+MUT G-score: 35 | QGRS length: 31 | Sequence: ...GCCTCCAGGCAGTGCTATGGTCCAGGCTGGCTTCG[G]TTTTCCAAGGAGCCTTTGGTGAGTTCAATTATCTG...
+ΔG-score: 3
+ΔQGRS length: -8
+Reason included: g-score increase
+G-change class: to_G
+WT top QGRS:  GGCAGTGCTATGGTCCAGGCTGGCTTCGTTTTTCCAAGG
+MUT top QGRS: GGCTGGCTTCGGTTTTCCAAGGAGCCTTTGG
+----------------------------------------------------------------------------------------------------
+
+FLT4 | C>T | ClinVar:1263493 | chr5:180603132
+WT  G-score: 56 | QGRS length: 30 | Sequence: ...ACTTGGGGGTTCAGGCCCGGCAGGGCGGGCAGAGG[G]CTGGAGGCCCAGGCTGGGAACTCATCTGGTTGAAC...
+MUT G-score: 36 | QGRS length: 35 | Sequence: ...ACTTGGGGGTTCAGGCCCGGCAGGGCGGGCAGAGG[A]CTGGAGGCCCAGGCTGGGAACTCATCTGGTTGAAC...
+ΔG-score: -20
+ΔQGRS length: 5
+Reason included: QGRS length increase
+G-change class: from_G
+WT top QGRS:  GGGTTCAGGCCCGGCAGGGCGGGCAGAGGG
+MUT top QGRS: GGCCCAGGCTGGGAACTCATCTGGTTGAACTCTGG
+----------------------------------------------------------------------------------------------------
+
+HNF1A | G>A | ClinVar:4793809 | chr12:121001212
+WT  G-score: 56 | QGRS length: 42 | Sequence: TAACCACGGCACCTGGGCCCTG[G]GGCCTGTACTGCCTGCTTGGGGGGTGATGAGGGCA...
+MUT G-score: 53 | QGRS length: 45 | Sequence: TAACCACGGCACCTGGGCCCTG[A]GGCCTGTACTGCCTGCTTGGGGGGTGATGAGGGCA...
+ΔG-score: -3
+ΔQGRS length: 3
+Reason included: QGRS length increase
+G-change class: from_G
+WT top QGRS:  GGGCCCTGGGGCCTGTACTGCCTGCTTGGGGGGTGATGAGGG
+MUT top QGRS: GGGAAGGCTACTTCGGGGCTGGGAAGTCGTCCTTACTCCTGTGGG
+----------------------------------------------------------------------------------------------------
+
+MITF | A>G | ClinVar:889640 | chr3:69967408
+WT  G-score: 35 | QGRS length: 22 | Sequence: ...TTGTCTATTTTTCTCTTCATATTTATATGGGGGGG[A]GGGCGCTGGATGCAAAAGTTGAAGATCGTGATGCT...
+MUT G-score: 36 | QGRS length: 11 | Sequence: ...TTGTCTATTTTTCTCTTCATATTTATATGGGGGGG[G]GGGCGCTGGATGCAAAAGTTGAAGATCGTGATGCT...
+ΔG-score: 1
+ΔQGRS length: -11
+Reason included: g-score increase
+G-change class: to_G
+WT top QGRS:  GGCCACGGGAACAGGACCATGG
+MUT top QGRS: GGGGGGGGGGG
+----------------------------------------------------------------------------------------------------
+
+MPL | G>A | ClinVar:282657 | chr1:43353643
+WT  G-score: 32 | QGRS length: 35 | Sequence: ...CCATGCCTAATTTTTTTCTATTTTTAGGAGAGACC[G]GTTTTCACCACGTTGGCCAGGATGGTCTCGATATC...
+MUT G-score: 30 | QGRS length: 44 | Sequence: ...CCATGCCTAATTTTTTTCTATTTTTAGGAGAGACC[A]GTTTTCACCACGTTGGCCAGGATGGTCTCGATATC...
+ΔG-score: -2
+ΔQGRS length: 9
+Reason included: QGRS length increase
+G-change class: from_G
+WT top QGRS:  GGAGAGACCGGTTTTCACCACGTTGGCCAGGATGG
+MUT top QGRS: GGTGATCCACCCACCTTGGCCTCCCAAAGTGTTAGGATTACAGG
+----------------------------------------------------------------------------------------------------
+
+MYH9 | C>T | ClinVar:1517774 | chr22:36282079
+WT  G-score: 56 | QGRS length: 43 | Sequence: ...CCTCCACCTCTGTGCAGGGCACAGAAGGCTGGGGT[G]GGGGGAGGAGTGGATTCCTCCCCACCCTGTCCCAG...
+MUT G-score: 56 | QGRS length: 44 | Sequence: ...CCTCCACCTCTGTGCAGGGCACAGAAGGCTGGGGT[A]GGGGGAGGAGTGGATTCCTCCCCACCCTGTCCCAG...
+ΔG-score: 0
+ΔQGRS length: 1
+Reason included: QGRS length increase
+G-change class: from_G
+WT top QGRS:  GGGCCTCCACCTCTGTGCAGGGCACAGAAGGCTGGGGTGGGGG
+MUT top QGRS: GGGCCTCCACCTCTGTGCAGGGCACAGAAGGCTGGGGTAGGGGG
+----------------------------------------------------------------------------------------------------
+
+NF1 | G>C | ClinVar:877190 | chr17:31374739
+WT  G-score: 63 | QGRS length: 16 | Sequence: ...GACTTGACACCATAAAGCCACAGACAAGGTACTTG[G]GGGGGAGGGCAGGGAAATTTCATATTTTATAGTGG...
+MUT G-score: 54 | QGRS length: 30 | Sequence: ...GACTTGACACCATAAAGCCACAGACAAGGTACTTG[C]GGGGGAGGGCAGGGAAATTTCATATTTTATAGTGG...
+ΔG-score: -9
+ΔQGRS length: 14
+Reason included: QGRS length increase
+G-change class: from_G
+WT top QGRS:  GGGGGGGAGGGCAGGG
+MUT top QGRS: GGGGGGAAAAAATAAACCTAGGGGAGAGGG
+----------------------------------------------------------------------------------------------------
+
+NF1 | G>T | ClinVar:337808 | chr17:31374739
+WT  G-score: 63 | QGRS length: 16 | Sequence: ...GACTTGACACCATAAAGCCACAGACAAGGTACTTG[G]GGGGGAGGGCAGGGAAATTTCATATTTTATAGTGG...
+MUT G-score: 54 | QGRS length: 30 | Sequence: ...GACTTGACACCATAAAGCCACAGACAAGGTACTTG[T]GGGGGAGGGCAGGGAAATTTCATATTTTATAGTGG...
+ΔG-score: -9
+ΔQGRS length: 14
+Reason included: QGRS length increase
+G-change class: from_G
+WT top QGRS:  GGGGGGGAGGGCAGGG
+MUT top QGRS: GGGGGGAAAAAATAAACCTAGGGGAGAGGG
+----------------------------------------------------------------------------------------------------
+
+NF1 | G>A | ClinVar:877191 | chr17:31374740
+WT  G-score: 63 | QGRS length: 16 | Sequence: ...ACTTGACACCATAAAGCCACAGACAAGGTACTTGG[G]GGGGAGGGCAGGGAAATTTCATATTTTATAGTGGA...
+MUT G-score: 54 | QGRS length: 30 | Sequence: ...ACTTGACACCATAAAGCCACAGACAAGGTACTTGG[A]GGGGAGGGCAGGGAAATTTCATATTTTATAGTGGA...
+ΔG-score: -9
+ΔQGRS length: 14
+Reason included: QGRS length increase
+G-change class: from_G
+WT top QGRS:  GGGGGGGAGGGCAGGG
+MUT top QGRS: GGGGGGAAAAAATAAACCTAGGGGAGAGGG
+----------------------------------------------------------------------------------------------------
+
+NF1 | G>T | ClinVar:877192 | chr17:31374740
+WT  G-score: 63 | QGRS length: 16 | Sequence: ...ACTTGACACCATAAAGCCACAGACAAGGTACTTGG[G]GGGGAGGGCAGGGAAATTTCATATTTTATAGTGGA...
+MUT G-score: 54 | QGRS length: 30 | Sequence: ...ACTTGACACCATAAAGCCACAGACAAGGTACTTGG[T]GGGGAGGGCAGGGAAATTTCATATTTTATAGTGGA...
+ΔG-score: -9
+ΔQGRS length: 14
+Reason included: QGRS length increase
+G-change class: from_G
+WT top QGRS:  GGGGGGGAGGGCAGGG
+MUT top QGRS: GGGGGGAAAAAATAAACCTAGGGGAGAGGG
+----------------------------------------------------------------------------------------------------
+
+NKX2-1 | T>C | ClinVar:329261 | chr14:36516808
+WT  G-score: 56 | QGRS length: 39 | Sequence: ...AAATACCAGGATTTTTTTTTTTTTTTGAAGGGAGG[A]CGGGAGCTGGGGAGAGGAAAGAGTCTTCAACATAA...
+MUT G-score: 62 | QGRS length: 18 | Sequence: ...AAATACCAGGATTTTTTTTTTTTTTTGAAGGGAGG[G]CGGGAGCTGGGGAGAGGAAAGAGTCTTCAACATAA...
+ΔG-score: 6
+ΔQGRS length: -21
+Reason included: g-score increase
+G-change class: to_G
+WT top QGRS:  GGGTTTTCCACGCTAGGGCGGGGCACAGATTGGAGAGGG
+MUT top QGRS: GGGAGGGCGGGAGCTGGG
+----------------------------------------------------------------------------------------------------
+
+NTHL1 | G>C | ClinVar:4644530 | chr16:2039919
+WT  G-score: 34 | QGRS length: 22 | Sequence: TGATGGC[C]GCATGGCTCTGGCCGAGGTGCCGCTGTGGCCACCG...
+MUT G-score: 35 | QGRS length: 19 | Sequence: TGATGGC[G]GCATGGCTCTGGCCGAGGTGCCGCTGTGGCCACCG...
+ΔG-score: 1
+ΔQGRS length: -3
+Reason included: g-score increase
+G-change class: to_G
+WT top QGRS:  GGCCGCATGGCTCTGGCCGAGG
+MUT top QGRS: GGCATGGCTCTGGCCGAGG
+----------------------------------------------------------------------------------------------------
+
+PAX8 | C>T | ClinVar:880890 | chr2:113217043
+WT  G-score: 60 | QGRS length: 24 | Sequence: ...AGGAAGCCAGAGAATCAGCAGGGTGGGTTAGTGAG[G]GATCCGGGAATAGCTGTGACTGGAGCCTGCATAAA...
+MUT G-score: 57 | QGRS length: 41 | Sequence: ...AGGAAGCCAGAGAATCAGCAGGGTGGGTTAGTGAG[A]GATCCGGGAATAGCTGTGACTGGAGCCTGCATAAA...
+ΔG-score: -3
+ΔQGRS length: 17
+Reason included: QGRS length increase
+G-change class: from_G
+WT top QGRS:  GGGTGGGTTAGTGAGGGATCCGGG
+MUT top QGRS: GGGACACAGCTGGAACAAGGGGGCAGGGGCCTGCAGCTGGG
+----------------------------------------------------------------------------------------------------
+
+RUNX1 | C>G | ClinVar:346402 | chr21:34791699
+WT  G-score: 60 | QGRS length: 20 | Sequence: ...GTTTATTCCAAAGAGTGTGGAATTTTGGTTGGGGT[G]GGGGGAGAGGAGGGATGCAACTCGCCCTGTTTGGC...
+MUT G-score: 57 | QGRS length: 44 | Sequence: ...GTTTATTCCAAAGAGTGTGGAATTTTGGTTGGGGT[C]GGGGGAGAGGAGGGATGCAACTCGCCCTGTTTGGC...
+ΔG-score: -3
+ΔQGRS length: 24
+Reason included: QGRS length increase
+G-change class: from_G
+WT top QGRS:  GGGGTGGGGGGAGAGGAGGG
+MUT top QGRS: GGGATCCCGGGCCCTGGGCCCGGCCACCGTCCTGGGGCCGAGGG
+----------------------------------------------------------------------------------------------------
+
+SDHC | G>A | ClinVar:277243 | chr1:161362818
+WT  G-score: 64 | QGRS length: 18 | Sequence: ...CTCTGTGGCTTCTGCCCTGGGGATGGGCCGGGTTG[G]GGGGTGGGTTGGTGAGGCTTTGGGTGCCACTGCCT...
+MUT G-score: 62 | QGRS length: 21 | Sequence: ...CTCTGTGGCTTCTGCCCTGGGGATGGGCCGGGTTG[A]GGGGTGGGTTGGTGAGGCTTTGGGTGCCACTGCCT...
+ΔG-score: -2
+ΔQGRS length: 3
+Reason included: QGRS length increase
+G-change class: from_G
+WT top QGRS:  GGGATGGGCCGGGTTGGG
+MUT top QGRS: GGGGATGGGCCGGGTTGAGGG
+----------------------------------------------------------------------------------------------------
+
+SETBP1 | G>A | ClinVar:1204082 | chr18:45063700
+WT  G-score: 60 | QGRS length: 35 | Sequence: TAGG[G]CGGGTCTGGGCGTCTGCACCTGGGGCCTAGGGAAC...
+MUT G-score: 60 | QGRS length: 39 | Sequence: TAGG[A]CGGGTCTGGGCGTCTGCACCTGGGGCCTAGGGAAC...
+ΔG-score: 0
+ΔQGRS length: 4
+Reason included: QGRS length increase
+G-change class: from_G
+WT top QGRS:  GGGCGGGTCTGGGCGTCTGCACCTGGGGCCTAGGG
+MUT top QGRS: GGGCGTCTGCACCTGGGGCCTAGGGAACTGACACGTGGG
+----------------------------------------------------------------------------------------------------
+
+SKI | G>A | ClinVar:1196567 | chr1:2306804
+WT  G-score: 59 | QGRS length: 23 | Sequence: ...CCGTGCCTGCCGCCGCAGCGCCGCCGACAACGCGG[G]TGCAGGGGGGCGCGGCTGGGCGGTGCAGCTCCGCC...
+MUT G-score: 36 | QGRS length: 41 | Sequence: ...CCGTGCCTGCCGCCGCAGCGCCGCCGACAACGCGG[A]TGCAGGGGGGCGCGGCTGGGCGGTGCAGCTCCGCC...
+ΔG-score: -23
+ΔQGRS length: 18
+Reason included: QGRS length increase
+G-change class: from_G
+WT top QGRS:  GGGTGCAGGGGGGCGCGGCTGGG
+MUT top QGRS: GGAATTGCCTGCGGGGTTTTGCCCTTGGTTTACTGAGGGGG
+----------------------------------------------------------------------------------------------------
+
+SMAD3 | G>T | ClinVar:341142 | chr15:67191109
+WT  G-score: 63 | QGRS length: 17 | Sequence: ...CCCCTTGTGAGCTGGATAGACTTGGGATGGGGAGG[G]AGGGAGTTTTGTCTGTCTCCCTCCCCTCTCAGAAC...
+MUT G-score: 36 | QGRS length: 32 | Sequence: ...CCCCTTGTGAGCTGGATAGACTTGGGATGGGGAGG[T]AGGGAGTTTTGTCTGTCTCCCTCCCCTCTCAGAAC...
+ΔG-score: -27
+ΔQGRS length: 15
+Reason included: QGRS length increase
+G-change class: from_G
+WT top QGRS:  GGGATGGGGAGGGAGGG
+MUT top QGRS: GGTGATGGTGGGGAGATGATGGGCTAAACAGG
+----------------------------------------------------------------------------------------------------
+
+TBX3 | T>C | ClinVar:323363 | chr12:114670556
+WT  G-score: 62 | QGRS length: 31 | Sequence: ...TCCTTAAAATATAACTGAGATTGCTGTGGGGAGGG[A]GGAGGGCAGAGGCTGCGGTTTGACTTTTTAATTTT...
+MUT G-score: 63 | QGRS length: 14 | Sequence: ...TCCTTAAAATATAACTGAGATTGCTGTGGGGAGGG[G]GGAGGGCAGAGGCTGCGGTTTGACTTTTTAATTTT...
+ΔG-score: 1
+ΔQGRS length: -17
+Reason included: g-score increase
+G-change class: to_G
+WT top QGRS:  GGGAGGGGGGGATTTAAAGGGAAGGAGTGGG
+MUT top QGRS: GGGAGGGGGGAGGG
+----------------------------------------------------------------------------------------------------
+
+TRIM27 | C>A | ClinVar:4445229 | chr6:28903198
+WT  G-score: 35 | QGRS length: 12 | Sequence: ...TGACTTCTTGGCTCCTTTTCTCCATTTCCTTTGGG[G]GAAGGGGGAATTGACCATGCTTAAGTGCATCCTAT...
+MUT G-score: 34 | QGRS length: 28 | Sequence: ...TGACTTCTTGGCTCCTTTTCTCCATTTCCTTTGGG[T]GAAGGGGGAATTGACCATGCTTAAGTGCATCCTAT...
+ΔG-score: -1
+ΔQGRS length: 16
+Reason included: QGRS length increase
+G-change class: from_G
+WT top QGRS:  GGGGGAAGGGGG
+MUT top QGRS: GGTGAATTCAGGCCAAAAGGGCTGTTGG
+----------------------------------------------------------------------------------------------------
+
+TRIM27 | C>G | ClinVar:4445230 | chr6:28903198
+WT  G-score: 35 | QGRS length: 12 | Sequence: ...TGACTTCTTGGCTCCTTTTCTCCATTTCCTTTGGG[G]GAAGGGGGAATTGACCATGCTTAAGTGCATCCTAT...
+MUT G-score: 34 | QGRS length: 28 | Sequence: ...TGACTTCTTGGCTCCTTTTCTCCATTTCCTTTGGG[C]GAAGGGGGAATTGACCATGCTTAAGTGCATCCTAT...
+ΔG-score: -1
+ΔQGRS length: 16
+Reason included: QGRS length increase
+G-change class: from_G
+WT top QGRS:  GGGGGAAGGGGG
+MUT top QGRS: GGTGAATTCAGGCCAAAAGGGCTGTTGG
+----------------------------------------------------------------------------------------------------
+
+XPC | C>G | ClinVar:289737 | chr3:14145852
+WT  G-score: 36 | QGRS length: 11 | Sequence: ...CCCACACCTGCCCTGGGCATGCCCAGCCCCTGGTG[G]TGGGGGCTTCTCTGCTGAGAAGGCAAACTGAGGCA...
+MUT G-score: 35 | QGRS length: 25 | Sequence: ...CCCACACCTGCCCTGGGCATGCCCAGCCCCTGGTG[C]TGGGGGCTTCTCTGCTGAGAAGGCAAACTGAGGCA...
+ΔG-score: -1
+ΔQGRS length: 14
+Reason included: QGRS length increase
+G-change class: from_G
+WT top QGRS:  GGTGGTGGGGG
+MUT top QGRS: GGAGGCGGGGTCAGGGGAGACGAGG
+----------------------------------------------------------------------------------------------------
+

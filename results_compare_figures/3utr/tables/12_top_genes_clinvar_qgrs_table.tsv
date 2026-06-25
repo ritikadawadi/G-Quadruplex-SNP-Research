@@ -1,0 +1,61 @@
+GENE	COSMIC_ROLE	CLINSIG	CLNDN	SUM_POS	SUM_NEG	N_SNV	REF_QGRS	QGRS_WITH_SNP	TOTAL_ABS
+TSC1	TSG	"Uncertain significance (12)
+Benign (4)
+not provided (2)
++1 more"	"• Isolated focal cortical dysplasia type II
+• Tuberous sclerosis 1
+• Tuberous sclerosis syndrome"	0.0	-72.0	20	28	16	72.0
+NF1	TSG, fusion	"Uncertain significance (3)
+Conflicting classifications of pathogeni… (1)
+Benign/Likely benign (1)
++1 more"	"• Neurofibromatosis
+• type 1
+• Neurofibromatosis-Noonan syndrome
+• familial spinal
+• Café-au-lait macules with pulmonary stenosis"	0.0	-36.0	6	6	3	36.0
+SMAD3	TSG	"Uncertain significance (5)
+Likely benign (5)
+Benign (2)"	"• Familial thoracic aortic aneurysm and aortic diss…
+• Loeys-Dietz syndrome
+• Aneurysm-osteoarthritis syndrome"	0.0	-27.0	12	21	9	27.0
+VHL	TSG	"Uncertain significance (10)
+Benign (2)"	• Von Hippel-Lindau syndrome	0.0	-26.0	12	16	9	26.0
+SKI	oncogene	Likely benign (1)	—	0.0	-23.0	1	12	1	23.0
+COL3A1	fusion	Benign (1)	"• Ehlers-Danlos syndrome
+• type 4"	0.0	-20.0	1	1	1	20.0
+FLT4	oncogene	Benign (1)	—	0.0	-20.0	1	9	1	20.0
+CBL	oncogene, TSG, fusion	"Uncertain significance (10)
+Benign/Likely benign (1)
+Benign (1)"	• CBL-related disorder	0.0	-20.0	12	28	10	20.0
+CDH1	TSG	"Benign (6)
+Uncertain significance (4)
+Conflicting classifications of pathogeni… (3)
++2 more"	"• Hereditary diffuse gastric adenocarcinoma
+• Hereditary cancer-predisposing syndrome
+• CDH1-related diffuse gastric and lobular breast c…
+• CDH1-related disorder
+• Breast and/or ovarian cancer"	18.0	0.0	16	7	2	18.0
+FANCI	TSG	"Uncertain significance (13)
+Likely benign (5)
+Conflicting classifications of pathogeni… (3)"	"• Progressive sclerosing poliodystrophy
+• Fanconi anemia
+• POLG-related disorder
+• Fanconi anemia complementation group I
+• Inborn genetic diseases"	9.0	-6.0	21	3	2	15.0
+COL1A1	fusion	"Uncertain significance (2)
+Benign/Likely benign (1)"	"• Ehlers-Danlos syndrome
+• arthrochalasia type
+• Osteogenesis imperfecta
+• Infantile cortical hyperostosis"	0.0	-15.0	3	6	3	15.0
+GATA2	oncogene	"Uncertain significance (3)
+Benign (2)"	• Deafness-lymphedema-leukemia syndrome	0.0	-10.0	5	8	4	10.0
+NKX2-1	oncogene, TSG	Uncertain significance (2)	"• Benign hereditary chorea
+• Brain-lung-thyroid syndrome"	6.0	0.0	2	3	2	6.0
+ANK1	—	Uncertain significance (3)	"• Hereditary spherocytosis type 1
+• Spherocytosis"	5.0	0.0	3	9	3	5.0
+PHOX2B	TSG	"Benign (1)
+Conflicting classifications of pathogeni… (1)
+Uncertain significance (1)"	"• Neuroblastoma
+• susceptibility to
+• 2
+• Congenital central hypoventilation"	0.0	-4.0	3	9	2	4.0

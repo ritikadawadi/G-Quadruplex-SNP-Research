@@ -1,0 +1,4 @@
+region	all_clinvar_overlaps	g_related_overlaps	pct_g_related	unique_genes_with_g_related_snps	unique_qgrs_motifs_with_g_related_snps	from_G_count	to_G_count
+TSS	442	307	69.5	68	84	245	62
+5'UTR	602	406	67.4	146	184	318	88
+3'UTR	974	638	65.5	173	435	500	138

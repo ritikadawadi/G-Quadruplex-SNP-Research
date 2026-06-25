@@ -1,0 +1,6 @@
+CLNDN_TERM	n_variants	n_gscore_changed	pct_gscore_changed	mean_abs_delta_all	mean_abs_delta_when_changed	mean_signed_delta
+Hereditary nonpolyposis colorectal neoplasms	20	16	80.0	27.2	34.0	-27.2
+Retinoblastoma	29	14	48.275862068965516	1.896551724137931	3.9285714285714284	-1.1379310344827587
+Hereditary cancer-predisposing syndrome	54	22	40.74074074074074	5.555555555555555	13.636363636363637	-5.518518518518518
+Hereditary breast ovarian cancer syndrome	31	2	6.451612903225806	1.0	15.5	-1.0
+Breast-ovarian cancer, familial, susceptibility to, 2	8	0	0.0	0.0		0.0

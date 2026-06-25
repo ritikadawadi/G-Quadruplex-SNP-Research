@@ -1,0 +1,63 @@
+Poster figure guide (2 sentences each)
+=====================================
+Applies to this region's pipeline outputs (TSS, 5′UTR, or 3′UTR wild-type vs G-related SNV mutants; QGRS default motif reporting).
+
+01_overview_panels.png
+Summarizes how often QGRS count and max g-score go up, down, or stay the same after each SNV, and how often the top-scoring motif sequence changes. Gives a quick snapshot of effect direction before looking at individual genes or clinical bins.
+
+02_effect_class_counts.png
+Counts how many SNV–mutant sequences fall into each detailed effect class (e.g. higher vs lower max g-score, no summary change, etc.). Shows which coarse outcome categories dominate in this region.
+
+03_delta_max_gscore_histogram.png
+Shows the distribution of Δ max g-score (mutant minus wild-type maximum QGRS score) across all variants. Highlights whether shifts are mostly near zero or include a long tail of strong decreases or increases.
+
+04_delta_qgrs_count_distribution.png
+Shows the distribution of changes in total QGRS motif count per sequence after the SNV. Useful for seeing whether variants usually leave motif number untouched or often add or remove motifs.
+
+05_wild_vs_mutant_max_gscore_scatter.png
+Each point is one SNV comparison: wild-type max g-score vs mutant max g-score. Points off the diagonal are variants that strengthen or weaken the strongest predicted motif in that region.
+
+06_wild_vs_mutant_qgrs_count_scatter.png
+Each point is one SNV comparison: wild-type QGRS count vs mutant QGRS count. Shows whether mutations tend to leave motif inventory unchanged or systematically shift counts.
+
+07_delta_gscore_by_g_change_class.png
+Compares Δ max g-score for "from_G" vs "to_G" ClinVar allele classes (G lost vs G gained in transcript space). Helps check whether direction of G change biases G4-score increases or decreases.
+
+08_top_genes_by_abs_gscore_change.png
+Ranks genes by the sum of absolute Δ max g-score over all their SNVs in this region (bar-end labels give wild-type QGRS motif count n). Genes with many impactful SNVs or large per-variant shifts rank highest.
+
+09_top_genes_by_qgrs_count_change.png
+Ranks genes by net change in total QGRS count summed across SNVs in this chart. Complements figure 08 by emphasizing motif-number perturbation rather than max g-score alone.
+
+10_clinsig_by_effect_group.png
+Stacks counts of variants by ClinVar significance bucket and coarse QGRS effect group. Shows whether certain clinical labels enrich for g-score-up, g-score-down, or no-change outcomes (interpret cautiously when bins are small).
+
+11_sorted_delta_max_gscore_profile.png
+Plots every variant's Δ max g-score after sorting from most negative to most positive, forming a step profile. The long flat middle near zero shows most SNVs are neutral for max g-score; tails show rare strong effects.
+
+12_top_genes_clinvar_qgrs_table.png
+Table of top genes with COSMIC cancer role, ClinVar significance and disease-related text, summed positive vs negative Δ max g-score, total wild-type QGRS, and distinct motifs overlapping a G-SNP. Consolidates clinical context with QGRS burden for the poster.
+
+13_clinsig_pct_gscore_changed.png
+For each collapsed ClinVar significance category, reports the percent of variants with any non-zero Δ max g-score. Shows which clinical annotation bins more often coincide with a change in the strongest predicted motif's score.
+
+14_clinsig_mean_abs_delta_when_changed.png
+Among variants that do change the max g-score, shows the mean magnitude |Δ| by ClinVar bucket. Separates how often a category changes (fig. 13) from how strong typical shifts are when they occur.
+
+15_clinsig_stacked_pct_gscore_change.png
+100% stacked bars per ClinVar category: green is the fraction with Δ max g-score ≠ 0; gray is unchanged. Gives an at-a-glance split of changed vs stable max g-score within each significance class.
+
+16_cosmic_role_pct_gscore_changed.png
+Same design as figure 13 but for COSMIC "role in cancer" (comma-separated roles are split so one variant may appear in more than one bin). Relates broad cancer gene roles to how often SNVs move the max g-score.
+
+17_cosmic_role_mean_abs_delta_when_changed.png
+Same design as figure 14 for COSMIC roles: mean |Δ max g-score| among variants that show a change. Highlights which annotated cancer roles tend to have larger typical G-score perturbations when a change happens.
+
+18_clndn_pct_gscore_changed.png
+Same design as figure 13 but for ClinVar disease or phenotype names (CLNDN). Pipe-separated CLNDN terms are split so one variant may contribute to more than one disease bucket; bar counts are variant×term rows, not unique SNVs.
+
+19_clndn_mean_abs_delta_when_changed.png
+Same design as figure 14 for CLNDN disease terms: mean |Δ max g-score| among rows that show a change, among terms meeting a minimum count threshold. Clinical association only — CLNDN annotates submission context, not G4 structure.
+
+20_clndn_stacked_pct_gscore_change.png
+100% stacked bars for the most frequent CLNDN terms (minimum count threshold): green = Δ max g-score ≠ 0; gray = unchanged. Complements figures 18–19 with an at-a-glance changed-vs-stable split for high-support disease labels.

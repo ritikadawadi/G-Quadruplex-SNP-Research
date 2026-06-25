@@ -1,0 +1,4 @@
+SOMATIC_GERMLINE_GROUP	count
+somatic_only	30
+germline_only	41
+somatic_and_germline	236

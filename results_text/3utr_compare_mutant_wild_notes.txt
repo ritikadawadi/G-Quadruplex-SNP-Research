@@ -1,0 +1,186 @@
+3'UTR Wild vs Mutant QGRS Comparison Notes
+
+Location of comparison outputs
+- compare_mutant_wild/3utr/3utr.comparison_summary.tsv
+- compare_mutant_wild/3utr/3utr.motif_deltas.tsv
+- compare_mutant_wild/3utr/3utr.overall_summary.tsv
+
+What was compared
+- The original wild-type 3'UTR QGRS results were compared against the mutant 3'UTR QGRS results.
+- Wild-type inputs came from:
+  - initial_fasta/results_3utr/3utr_reference.qgrs_summary.tsv
+  - initial_fasta/results_3utr/3utr_reference.qgrs_hits.tsv
+- Mutant inputs came from:
+  - mutant_qgrs/3utr/3utr_mutant.qgrs_summary.tsv
+  - mutant_qgrs/3utr/3utr_mutant.qgrs_hits.tsv
+- The mutant manifest was used to connect each mutant sequence back to the exact SNP:
+  - mutant_fasta/3utr/3utr.mutant_manifest.tsv
+
+How the comparison was done
+- Each mutant 3'UTR sequence was compared only to its matching original wild-type 3'UTR sequence.
+- For each SNP, the comparison tracked:
+  - reference QGRS count
+  - mutant QGRS count
+  - change in QGRS count
+  - reference maximum g-score
+  - mutant maximum g-score
+  - change in maximum g-score
+  - reference maximum tetrad count
+  - mutant maximum tetrad count
+  - whether the top-scoring QGRS sequence changed
+  - how many motif instances were gained
+  - how many motif instances were lost
+- A motif-level comparison was also done by comparing the motif sequence, g-score, tetrad count, and motif length between wild-type and mutant outputs.
+
+Overall 3'UTR comparison summary
+- Total mutant comparisons: 638
+- Mean delta QGRS count: -0.133
+- Mean delta max g-score: -0.417
+- SNPs with higher max g-score: 12
+- SNPs with lower max g-score: 42
+- SNPs with unchanged max g-score: 584
+- SNPs with more QGRS motifs: 3
+- SNPs with fewer QGRS motifs: 88
+- SNPs with unchanged QGRS count: 547
+- SNPs with at least one gained motif instance: 563
+- SNPs with at least one lost motif instance: 638
+- SNPs where the top motif sequence changed: 118
+
+Interpretation of the summary
+- The 3'UTR set shows a milder average effect on max g-score than the 5'UTR set.
+- Most 3'UTR SNPs left the summary-level maximum g-score unchanged.
+- Even so, many SNPs still changed motif composition or reduced motif count.
+- This means 3'UTR SNPs often preserve the top summary value while still reshaping the underlying QGRS landscape.
+
+Effect classes observed
+- no_summary_change: 496
+- fewer_qgrs_same_max_gscore: 85
+- lower_max_gscore: 39
+- higher_max_gscore: 12
+- more_qgrs_same_max_gscore: 3
+- fewer_qgrs_lower_max_gscore: 2
+- qgrs_lost_all: 1
+
+What the effect classes mean
+- no_summary_change:
+  - the mutant had the same total QGRS count and same max g-score as the wild type
+  - the motif sequence may still have changed
+- fewer_qgrs_same_max_gscore:
+  - the total number of motifs decreased, but the strongest motif kept the same score
+- lower_max_gscore:
+  - the strongest mutant motif scored lower than the strongest wild-type motif
+- higher_max_gscore:
+  - the mutant created a stronger top-scoring motif than the wild type
+- more_qgrs_same_max_gscore:
+  - the total number of motifs increased, but the best score stayed the same
+- fewer_qgrs_lower_max_gscore:
+  - the motif count decreased and the strongest motif also weakened
+- qgrs_lost_all:
+  - all detectable QGRS motifs in that mutant sequence disappeared
+
+Representative examples
+
+1. Example of an increase in max g-score
+- Gene: CDH1
+- Variant: 16:68833515
+- G-change class: to_G
+- Reference max g-score: 34
+- Mutant max g-score: 52
+- Delta max g-score: +18
+- Reference QGRS count: 7
+- Mutant QGRS count: 7
+- Effect class: higher_max_gscore
+- Reference top motif:
+  - GGCCCTAAAGGGGGTTAGTTGAGGGGTAGGGGG
+- Mutant top motif:
+  - GGGGACTCGAGAGAGGGGGGCCCCAGACCCATGTGCTGGG
+- Interpretation:
+  - the motif count stayed unchanged
+  - but the best mutant motif became much stronger
+
+2. Example of a strong decrease in max g-score
+- Gene: SMAD3
+- Variant: 15:67191109
+- G-change class: from_G
+- Reference max g-score: 63
+- Mutant max g-score: 36
+- Delta max g-score: -27
+- Reference QGRS count: 21
+- Mutant QGRS count: 21
+- Effect class: lower_max_gscore
+- Reference top motif:
+  - GGGATGGGGAGGGAGGG
+- Mutant top motif:
+  - GGTGATGGTGGGGAGATGATGGGCTAAACAGG
+- Interpretation:
+  - the same number of motifs remained
+  - but the strongest motif became substantially weaker
+
+3. Example where motif count decreased but max g-score stayed the same
+- Gene: AKT3
+- Variant: 1:243499787
+- G-change class: from_G
+- Reference QGRS count: 18
+- Mutant QGRS count: 17
+- Delta QGRS count: -1
+- Reference max g-score: 62
+- Mutant max g-score: 62
+- Effect class: fewer_qgrs_same_max_gscore
+- Reference top motif:
+  - GGGTGGGCCACTGGGACTGACGGGGGTTAAAGGG
+- Mutant top motif:
+  - GGGTGGGCCACTGGGACTGACGGGGGTTAAAGGG
+- Interpretation:
+  - one motif was lost
+  - but the strongest motif stayed the same
+
+4. Example where the top motif sequence changed but summary values did not
+- Gene: BAP1
+- Variant: 3:52401803
+- G-change class: from_G
+- Reference QGRS count: 6
+- Mutant QGRS count: 6
+- Reference max g-score: 62
+- Mutant max g-score: 62
+- Top sequence changed: yes
+- Reference top motif:
+  - GGGTCCTAGCTGGGGGCCTGGGTGGGCCCTGGG
+- Mutant top motif:
+  - GGGTCCTAGCTGGGGGCCTGGGTGGGCCCTGGTCTCTGGG
+- Effect class: no_summary_change
+- Interpretation:
+  - the summary metrics suggest no effect
+  - but the actual top motif sequence changed
+
+How to read the output files
+
+comparison_summary.tsv
+- One row per mutant SNP sequence.
+- Best for answering:
+  - Did the SNP increase or decrease the max g-score?
+  - Did the SNP increase or decrease the motif count?
+  - Did the top motif sequence change?
+  - Which SNPs had the strongest effects?
+
+motif_deltas.tsv
+- One row per motif gain or motif loss event.
+- Best for answering:
+  - Which exact QGRS motifs were lost?
+  - Which exact QGRS motifs were gained?
+  - Did the mutant create new motifs or remove existing motifs?
+
+overall_summary.tsv
+- One summary row for the whole 3'UTR comparison dataset.
+- Best for high-level reporting on a poster or in notes.
+
+Main biological takeaways from the 3'UTR comparison
+- Most 3'UTR SNPs did not change the summary-level max g-score.
+- However, many still reduced total motif number or altered motif identity.
+- Loss of G was more commonly associated with unchanged or weaker QGRS behavior than with improvement.
+- A smaller subset of to_G mutations increased the top motif strength.
+- Compared with 5'UTR, the average g-score effect in 3'UTR was milder, but motif turnover was still common.
+
+Bottom line
+- The 3'UTR comparison step is complete.
+- The results now show, per SNP, how the mutant 3'UTR sequence differs from the wild type in QGRS burden and g-score.
+- With TSS, 5'UTR, and 3'UTR all compared, the project is now ready for a combined cross-region interpretation step.

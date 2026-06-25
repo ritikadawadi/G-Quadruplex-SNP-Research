@@ -1,0 +1,4 @@
+SOMATIC_GERMLINE_GROUP	mean_delta_max_gscore	count
+somatic_and_germline	-0.5622317596566524	233
+somatic_only	-0.4254658385093168	322
+germline_only	0.024096385542168676	83

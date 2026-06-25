@@ -1,0 +1,99 @@
+Project Conclusion
+
+This project built a full computational pipeline to evaluate how G-related single-nucleotide variants (SNVs) may affect G-quadruplex-forming sequences (QGRS/G4 motifs) in non-coding regulatory regions of COSMIC cancer genes. The analysis focused on three transcript-oriented regions: TSS upstream 500 bp, 5'UTR, and 3'UTR.
+
+Main goal achieved
+- The project successfully moved from gene list to reference sequence extraction, QGRS discovery, ClinVar overlap, G-related SNP filtering, mutant sequence generation, mutant QGRS scanning, and wild-vs-mutant comparison.
+- This means the pipeline now captures not only where G4-like motifs occur, but also how they may change after clinically observed G-related variants are introduced into genes with known cancer relevance.
+
+Key biological conclusion
+- G-related SNVs can alter quadruplex potential in all three non-coding region classes.
+- The observed changes include:
+  - reduction in maximum g-score
+  - increase in maximum g-score
+  - reduction in the number of detected QGRS motifs
+  - complete loss of detectable motifs in some cases
+  - unchanged summary scores but altered top-motif sequence composition
+- Because the analyzed genes came from the COSMIC Cancer Gene Census, these findings are relevant to cancer-associated regulatory regions rather than to a random gene background.
+
+Overall findings by region
+
+TSS
+- Total ClinVar overlaps in TSS QGRS regions: 442
+- G-related overlaps: 307
+- Mean delta QGRS count after mutation: -0.081
+- Mean delta max g-score after mutation: -1.41
+- Interpretation:
+  - TSS variants often preserved the general number of motifs, but many changed motif composition or weakened the strongest motif.
+  - A smaller subset strengthened the top motif.
+- In a cancer context, these promoter-proximal changes may matter because altered quadruplex potential near transcription start sites could influence transcriptional control of cancer genes.
+
+5'UTR
+- Total ClinVar overlaps in 5'UTR QGRS regions: 602
+- G-related overlaps: 406
+- Mean delta QGRS count after mutation: -0.113
+- Mean delta max g-score after mutation: -3.377
+- Interpretation:
+  - 5'UTR showed the strongest average reduction in top motif strength among the three regions.
+  - Some variants caused complete loss of detectable QGRS motifs.
+  - This suggests the 5'UTR may be particularly sensitive to G-related substitutions in the context of quadruplex organization.
+- In cancer genes, this raises the possibility that 5'UTR variants may influence translation-associated regulation or transcript handling in ways that affect oncogene or tumor suppressor output.
+
+3'UTR
+- Total ClinVar overlaps in 3'UTR QGRS regions: 974
+- G-related overlaps: 638
+- Mean delta QGRS count after mutation: -0.133
+- Mean delta max g-score after mutation: -0.417
+- Interpretation:
+  - 3'UTR contained the largest number of QGRS-associated SNPs and affected genes.
+  - The average impact on max g-score was milder than in 5'UTR, but the total motif landscape was broad and often restructured.
+  - Many variants changed motif composition without strongly changing the top summary score.
+- In cancer-relevant genes, this could matter for post-transcriptional regulation, RNA stability, localization, or protein-binding landscapes tied to the 3'UTR.
+
+Strong representative examples
+- TSS increase:
+  - XPA, chr9:97697358, to_G, delta max g-score +19
+- TSS decrease:
+  - CD274, chr9:5450497, from_G, delta max g-score -22
+- 5'UTR increase:
+  - RB1, chr13:48303780, to_G, delta max g-score +10
+- 5'UTR strong disruption:
+  - MSH2, chr2:47403172, from_G, complete QGRS loss
+- 3'UTR increase:
+  - CDH1, chr16:68833515, to_G, delta max g-score +18
+- 3'UTR decrease:
+  - SMAD3, chr15:67191109, from_G, delta max g-score -27
+
+Interpretation of region-specific differences
+- TSS regions were fixed-size promoter-proximal windows and therefore more controlled in length.
+- 5'UTRs were shorter than 3'UTRs on average but often highly structured and more sensitive to local motif disruption.
+- 3'UTRs were the longest and richest in total QGRS opportunities, which likely explains why they produced the largest number of total variant overlaps and motif changes.
+- The stronger average negative effect in 5'UTR may reflect the compact arrangement of G-rich motifs in those regions, where even a single base change can destabilize a motif more strongly.
+- Because these regions belong to COSMIC cancer genes, differences across TSS, 5'UTR, and 3'UTR can be interpreted in the context of promoter control, translational regulation, and post-transcriptional regulation of cancer-associated transcripts.
+
+Important methodological conclusion
+- Strand-aware transcript-space handling was essential.
+- Minus-strand variants had to be converted into transcript-oriented allele changes before mutant FASTA generation.
+- Exon-aware handling for UTRs was also essential because 5'UTR and 3'UTR are spliced transcript regions, not always single continuous genomic blocks.
+
+Important scope note
+- The current analysis includes point mutations only.
+- Specifically, it models G-related single-nucleotide changes:
+  - to_G
+  - from_G
+- Insertions and deletions were not included in the mutant FASTA or comparison steps.
+
+Overall conclusion
+- The results support the central hypothesis that G-related variation can meaningfully alter predicted quadruplex potential in non-coding cancer-gene regions.
+- These effects are region-dependent and can appear as:
+  - stronger or weaker top motifs
+  - motif loss or gain
+  - motif sequence reorganization without obvious summary-level change
+- The fact that the gene set was derived from the COSMIC Cancer Gene Census strengthens the biological relevance of these observations for cancer-focused regulatory analysis.
+- The pipeline is now complete enough to support downstream biological interpretation, figure generation, and manuscript or poster presentation in a cancer-gene context.
+
+Recommended next steps
+- Build a combined cross-region summary figure and table for publication-style reporting.
+- Rank variants by strongest decrease or increase in max g-score.
+- Explore whether ClinVar significance categories are enriched among stronger QGRS-altering variants.
+- Optionally extend the pipeline later to include insertions and deletions as a separate analysis.

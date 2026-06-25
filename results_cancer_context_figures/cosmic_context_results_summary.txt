@@ -1,0 +1,7 @@
+COSMIC Cancer Context Figure Summary
+
+This output set joins the wild-vs-mutant comparison results to annotation fields from the COSMIC Cancer Gene Census, including tissue type, role in cancer, and somatic/germline status.
+
+TSS: 307 variant comparisons, 68 unique genes
+5'UTR: 406 variant comparisons, 146 unique genes
+3'UTR: 638 variant comparisons, 173 unique genes

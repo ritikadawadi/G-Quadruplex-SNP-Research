@@ -1,0 +1,211 @@
+Insertions and Deletions vs Point Mutation Changes
+
+Important scope note
+- The current project workflow modeled point mutations only.
+- In practice, the mutant FASTA and wild-vs-mutant comparisons were built from single-nucleotide variants (SNVs), meaning one base was substituted by one other base.
+- Insertions and deletions were not carried through the current mutant FASTA pipeline.
+- Therefore, the examples below use real SNP results from TSS, 5'UTR, and 3'UTR to explain how indels would likely behave differently.
+
+Why point mutations and indels are different
+- A point mutation changes one base to another, but the sequence length stays the same.
+- An insertion adds one or more bases, so the mutant sequence becomes longer than the wild type.
+- A deletion removes one or more bases, so the mutant sequence becomes shorter than the wild type.
+- Because sequence length stays the same for point mutations, the positions of all downstream bases are unchanged.
+- Because sequence length changes for insertions and deletions, all downstream bases shift position relative to the wild type.
+- This makes insertions and deletions more disruptive for sequence-based motif analysis.
+
+Why this matters for QGRS
+- QGRS depends on the arrangement of G runs and loop lengths.
+- A point mutation affects one base at one position.
+- An insertion or deletion can affect:
+  - the G run itself
+  - the loop size
+  - the spacing between G runs
+  - the length of the entire downstream sequence
+- Because of this, an indel can have a larger structural effect than a single-base substitution.
+- A point mutation might weaken or strengthen an existing motif.
+- An indel can do that too, but it can also:
+  - create a new motif frame
+  - destroy an entire motif
+  - shift multiple motifs downstream
+  - change the lengths of loops between tetrads
+
+Why indels are harder to compare than point mutations
+- In the current point-mutation workflow, wild-type and mutant sequences have the same length.
+- That makes direct comparison simpler:
+  - same transcript-space positions
+  - same overall coordinate frame
+  - easier per-SNP summary comparison
+- With an insertion or deletion, the mutant sequence length changes.
+- That means downstream QGRS start positions no longer line up directly with the wild-type sequence.
+- For indels, comparison would need to be more alignment-aware, because a motif at one mutant position may not correspond to the same wild-type position anymore.
+
+How to think about the difference biologically
+- Point mutation:
+  - changes one letter
+  - often changes motif quality
+  - sometimes changes motif count
+  - often keeps the general local layout recognizable
+- Insertion or deletion:
+  - changes sequence length
+  - can change motif quality and motif count
+  - can also change the local architecture more strongly
+  - is more likely to shift, split, merge, or remove motifs entirely
+
+Real point-mutation examples from this project
+
+1. TSS example where a point mutation weakened the strongest motif
+- Region: TSS
+- Gene: CD274
+- Variant: 9:5450497
+- Change class: from_G
+- Reference QGRS count: 2
+- Mutant QGRS count: 2
+- Reference max g-score: 57
+- Mutant max g-score: 35
+- Delta max g-score: -22
+- Reference top motif:
+  - GGGCAGAGGTGGGCGGGACCCCGCCTCCGGG
+- Mutant top motif:
+  - GGATTTGCTGCCTTGGGCAGAGGTGGGCGGGACCCCGCCTCCCGG
+- What this shows:
+  - a single base change was enough to make the strongest motif much weaker
+  - but the total motif count stayed the same
+- How an indel would differ:
+  - if a deletion removed one G from the same G-rich core, it could reduce the max g-score even more dramatically
+  - if an insertion added a base inside the loop region, it could change loop spacing and possibly create a different motif architecture entirely
+
+2. TSS example where a point mutation strengthened the strongest motif
+- Region: TSS
+- Gene: XPA
+- Variant: 9:97697358
+- Change class: to_G
+- Reference QGRS count: 2
+- Mutant QGRS count: 2
+- Reference max g-score: 36
+- Mutant max g-score: 55
+- Delta max g-score: +19
+- What this shows:
+  - adding one G through a point mutation can make an existing motif much stronger
+- How an insertion would differ:
+  - a short G insertion in the same local region could potentially strengthen the motif even more
+  - it might also change tetrad structure or create an extra G run that shifts the preferred motif frame
+
+3. 5'UTR example where a point mutation removed all QGRS motifs
+- Region: 5'UTR
+- Gene: MSH2
+- Variant: 2:47403172
+- Change class: from_G
+- Reference QGRS count: 1
+- Mutant QGRS count: 0
+- Reference max g-score: 34
+- Mutant max g-score: 0
+- Delta max g-score: -34
+- Reference top motif:
+  - GGAGGTGAGGAGG
+- Mutant top motif:
+  - none
+- What this shows:
+  - even a single-base change can completely remove the only detectable motif
+- How a deletion would differ:
+  - deleting one base from this short G-rich motif would likely also destroy the motif
+  - but a deletion could also shorten the sequence and shift all downstream positions, making comparison more complicated than with a point mutation
+
+4. 5'UTR example where a point mutation strengthened a motif
+- Region: 5'UTR
+- Gene: RB1
+- Variant: 13:48303780
+- Change class: to_G
+- Reference QGRS count: 2
+- Mutant QGRS count: 2
+- Reference max g-score: 53
+- Mutant max g-score: 63
+- Delta max g-score: +10
+- Reference top motif:
+  - GGGCGGGGGAGGGCGCGTCCGGTTTTTCTCAGGG
+- Mutant top motif:
+  - GGGCGGGGGAGGGCGCGTCCGGGTTTTCTCAGGG
+- What this shows:
+  - a point mutation can strengthen the motif while keeping the motif count unchanged
+- How an insertion would differ:
+  - adding one extra G in a dense G-run might create a stronger or longer motif
+  - but it could also change loop definitions or produce a new best motif with different tetrad placement
+
+5. 3'UTR example where a point mutation strongly weakened the top motif
+- Region: 3'UTR
+- Gene: SMAD3
+- Variant: 15:67191109
+- Change class: from_G
+- Reference QGRS count: 21
+- Mutant QGRS count: 21
+- Reference max g-score: 63
+- Mutant max g-score: 36
+- Delta max g-score: -27
+- Reference top motif:
+  - GGGATGGGGAGGGAGGG
+- Mutant top motif:
+  - GGTGATGGTGGGGAGATGATGGGCTAAACAGG
+- What this shows:
+  - motif number stayed the same
+  - but the strongest motif was much weaker after the point mutation
+- How a deletion would differ:
+  - deleting a G from the leading G run could collapse the strongest motif even more severely
+  - it could also shift nearby motif coordinates across the long 3'UTR sequence
+
+6. 3'UTR example where a point mutation strengthened the top motif
+- Region: 3'UTR
+- Gene: CDH1
+- Variant: 16:68833515
+- Change class: to_G
+- Reference QGRS count: 7
+- Mutant QGRS count: 7
+- Reference max g-score: 34
+- Mutant max g-score: 52
+- Delta max g-score: +18
+- Reference top motif:
+  - GGCCCTAAAGGGGGTTAGTTGAGGGGTAGGGGG
+- Mutant top motif:
+  - GGGGACTCGAGAGAGGGGGGCCCCAGACCCATGTGCTGGG
+- What this shows:
+  - one point mutation can create a much stronger best motif without changing motif count
+- How an insertion would differ:
+  - inserting an extra G in this region could generate an even more dramatic motif rearrangement
+  - because the downstream sequence would shift, the new strongest motif might not align cleanly with the wild-type motif positions
+
+Why indels would be especially important in UTRs
+- 5'UTR and 3'UTR sequences are transcript regions that can be long and structurally variable.
+- A point mutation changes one base but keeps the UTR length fixed.
+- An insertion or deletion changes UTR length and can therefore alter:
+  - motif start coordinates
+  - motif lengths
+  - loop sizes
+  - local sequence architecture downstream of the indel
+- This is especially relevant for 3'UTR where motifs are numerous and widespread.
+
+How indel analysis would differ in the pipeline
+- Point mutation workflow:
+  - substitute one base
+  - rerun QGRS
+  - compare wild vs mutant summaries and motifs directly
+- Indel workflow would require:
+  - inserting or deleting bases in transcript-space sequence
+  - creating mutant sequences with changed length
+  - rerunning QGRS on sequences of different size
+  - using more flexible comparison logic because motif coordinates downstream of the indel would shift
+  - likely relying more on motif sequence identity and local alignment than on simple position matching
+
+Practical conclusion
+- Point mutations are easier to model and interpret because the sequence length stays constant.
+- Insertions and deletions are likely to produce more disruptive and harder-to-compare changes.
+- In G4/QGRS analysis, indels could be biologically more dramatic than point mutations because they can alter both G content and spacing.
+- The current project has already shown that even one-base substitutions can substantially change max g-score or remove motifs completely.
+- That suggests indels, if included later, could have equal or even stronger effects on quadruplex potential.
+
+Bottom line
+- The current results are all based on point mutations only.
+- These results already show that single-base changes can:
+  - weaken a motif
+  - strengthen a motif
+  - remove all motifs
+  - preserve summary counts but still change motif identity
+- Insertions and deletions would differ because they change sequence length and shift downstream positions, making them potentially more disruptive and more complex to compare.

@@ -1,0 +1,9 @@
+CLNSIG_PRIMARY	higher_max_gscore	lower_max_gscore	no_summary_change	other_effects
+Uncertain_significance	9	43	123	29
+Likely_benign	4	25	57	4
+Benign	2	13	29	5
+not_reported	2	5	18	2
+Conflicting_classifications_of_pathogenicity	1	7	11	7
+Benign/Likely_benign	0	2	4	2
+Likely_pathogenic	0	0	1	0
+Pathogenic	0	0	1	0

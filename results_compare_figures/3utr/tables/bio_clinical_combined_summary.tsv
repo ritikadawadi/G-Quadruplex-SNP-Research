@@ -1,0 +1,39 @@
+region	axis	CLNSIG_SIMPLE	n_variants	n_gscore_changed	pct_gscore_changed	mean_abs_delta_all	mean_abs_delta_when_changed	mean_signed_delta	ROLE_SHORT	CLNDN_TERM
+3utr	ClinVar_CLNSIG	Uncertain significance	307	32	10.423452768729641	0.6221498371335505	5.96875	-0.46579804560260585		
+3utr	ClinVar_CLNSIG	Likely benign	106	8	7.547169811320755	0.5471698113207547	7.25	-0.18867924528301888		
+3utr	ClinVar_CLNSIG	Conflicting	30	2	6.666666666666667	0.36666666666666664	5.5	-0.36666666666666664		
+3utr	ClinVar_CLNSIG	Not reported	47	3	6.382978723404255	0.06382978723404255	1.0	-0.06382978723404255		
+3utr	ClinVar_CLNSIG	Benign	142	7	4.929577464788732	0.3873239436619718	7.857142857142857	-0.3732394366197183		
+3utr	COSMIC_role		442	39	8.823529411764707	0.5588235294117647	6.333333333333333	-0.39592760180995473	TSG	
+3utr	COSMIC_role		195	17	8.717948717948717	0.558974358974359	6.411764705882353	-0.5384615384615384	fusion	
+3utr	COSMIC_role		193	14	7.253886010362694	0.47150259067357514	6.5	-0.38860103626943004	oncogene	
+3utr	COSMIC_role		22	1	4.545454545454546	0.22727272727272727	5.0	0.22727272727272727	Not reported	
+3utr	ClinVar_CLNDN		18	8	44.44444444444444	0.7222222222222222	1.625	0.16666666666666666		Progressive sclerosing poliodystrophy
+3utr	ClinVar_CLNDN		10	4	40.0	7.2	18.0	-7.2		Tuberous sclerosis syndrome
+3utr	ClinVar_CLNDN		8	1	12.5	0.125	1.0	-0.125		Nephrotic syndrome, type 4
+3utr	ClinVar_CLNDN		8	1	12.5	0.125	1.0	-0.125		Meacham syndrome
+3utr	ClinVar_CLNDN		17	2	11.764705882352942	2.1176470588235294	18.0	-2.1176470588235294		Isolated focal cortical dysplasia type II
+3utr	ClinVar_CLNDN		12	1	8.333333333333334	2.1666666666666665	26.0	-2.1666666666666665		Von Hippel-Lindau syndrome
+3utr	ClinVar_CLNDN		12	1	8.333333333333334	1.6666666666666667	20.0	-1.6666666666666667		CBL-related disorder
+3utr	ClinVar_CLNDN		13	1	7.6923076923076925	0.23076923076923078	3.0	-0.23076923076923078		Hereditary thrombocytopenia and hematologic cancer predisposition syndrome
+3utr	ClinVar_CLNDN		13	1	7.6923076923076925	0.23076923076923078	3.0	-0.23076923076923078		Hereditary thrombocytopenia and hematological cancer predisposition syndrome associated with RUNX1
+3utr	ClinVar_CLNDN		14	1	7.142857142857143	0.21428571428571427	3.0	-0.21428571428571427		Congenital myopathy 4B, autosomal recessive
+3utr	ClinVar_CLNDN		17	1	5.882352941176471	0.17647058823529413	3.0	-0.17647058823529413		Congenital myopathy with fiber type disproportion
+3utr	ClinVar_CLNDN		21	1	4.761904761904762	0.8571428571428571	18.0	0.8571428571428571		Hereditary cancer-predisposing syndrome
+3utr	ClinVar_CLNDN		23	1	4.3478260869565215	1.173913043478261	27.0	-1.173913043478261		Loeys-Dietz syndrome
+3utr	ClinVar_CLNDN		28	1	3.5714285714285716	0.9642857142857143	27.0	-0.9642857142857143		Familial thoracic aortic aneurysm and aortic dissection
+3utr	ClinVar_CLNDN		9	0	0.0	0.0		0.0		Landau-Kleffner syndrome
+3utr	ClinVar_CLNDN		14	0	0.0	0.0		0.0		Juvenile polyposis/hereditary hemorrhagic telangiectasia syndrome
+3utr	ClinVar_CLNDN		14	0	0.0	0.0		0.0		Loeys-Dietz syndrome 1
+3utr	ClinVar_CLNDN		10	0	0.0	0.0		0.0		Immunodeficiency 104
+3utr	ClinVar_CLNDN		11	0	0.0	0.0		0.0		Medulloblastoma
+3utr	ClinVar_CLNDN		9	0	0.0	0.0		0.0		Multiple endocrine neoplasia, type 1
+3utr	ClinVar_CLNDN		8	0	0.0	0.0		0.0		Myhre syndrome
+3utr	ClinVar_CLNDN		13	0	0.0	0.0		0.0		Hereditary diffuse gastric adenocarcinoma
+3utr	ClinVar_CLNDN		8	0	0.0	0.0		0.0		Neurofibromatosis, type 2
+3utr	ClinVar_CLNDN		11	0	0.0	0.0		0.0		Peutz-Jeghers syndrome
+3utr	ClinVar_CLNDN		12	0	0.0	0.0		0.0		Pheochromocytoma
+3utr	ClinVar_CLNDN		9	0	0.0	0.0		0.0		Generalized juvenile polyposis/juvenile polyposis coli
+3utr	ClinVar_CLNDN		15	0	0.0	0.0		0.0		Tuberous sclerosis 1
+3utr	ClinVar_CLNDN		13	0	0.0	0.0		0.0		Tuberous sclerosis 2
+3utr	ClinVar_CLNDN		8	0	0.0	0.0		0.0		Amyotrophic neuralgia

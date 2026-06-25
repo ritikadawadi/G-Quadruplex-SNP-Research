@@ -1,0 +1,40 @@
+3'UTR COSMIC Cancer Context Summary
+
+Total variant comparisons in this region: 638
+Unique genes represented: 173
+Mean delta max g-score: -0.417
+
+Most frequent role-in-cancer categories
+- TSG: 442
+- fusion: 195
+- oncogene: 193
+- not_reported: 22
+
+Role-in-cancer categories with most negative mean delta max g-score
+- fusion: -0.538
+- TSG: -0.396
+- oncogene: -0.389
+- not_reported: 0.227
+
+Most frequent tissue-type categories
+- E: 408
+- L: 210
+- O: 160
+- M: 86
+
+Tissue-type categories with most negative mean delta max g-score
+- O: -0.887
+- M: -0.709
+- E: -0.377
+- L: -0.195
+
+Somatic/germline group counts
+- somatic_only: 322
+- somatic_and_germline: 233
+- germline_only: 83
+
+Interpretation
+- This summary joins the 3'UTR wild-vs-mutant comparison results to COSMIC cancer-gene annotations.
+- Counts reflect variant comparisons, not just unique genes, so genes with multiple qualifying SNPs can contribute multiple rows.
+- Role-in-cancer and tissue-type fields were expanded when multiple labels were present in the COSMIC source file.
+- Somatic/germline grouping was derived directly from the COSMIC SOMATIC and GERMLINE columns.

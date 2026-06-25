@@ -1,0 +1,53 @@
+GENE	COSMIC_ROLE	CLINSIG	CLNDN	SUM_POS	SUM_NEG	N_SNV	REF_QGRS	QGRS_WITH_SNP	TOTAL_ABS
+MSH2	TSG	"Uncertain significance (12)
+Conflicting classifications of pathogeni… (8)
+Likely benign (2)"	"• Hereditary nonpolyposis colorectal neoplasms
+• Hereditary cancer-predisposing syndrome
+• Lynch syndrome
+• Lynch syndrome 1
+• Muir-Torré syndrome
+• (+3 other terms)"	2.0	-544.0	22	1	1	546.0
+FANCA	TSG	"Uncertain significance (3)
+Conflicting classifications of pathogeni… (1)"	"• Fanconi anemia
+• Fanconi anemia complementation group A"	0.0	-96.0	4	1	1	96.0
+RB1	TSG	"Uncertain significance (28)
+Conflicting classifications of pathogeni… (2)"	"• Retinoblastoma
+• Hereditary cancer-predisposing syndrome
+• RB1-related disorder
+• Malignant tumor of urinary bladder"	11.0	-45.0	30	2	2	56.0
+SDHD	TSG	"Likely benign (2)
+Uncertain significance (1)"	"• Hereditary pheochromocytoma and paraganglioma
+• SDHD-related disorder"	0.0	-50.0	3	1	1	50.0
+FUS	TSG, fusion	"Uncertain significance (3)
+Benign (1)
+Benign/Likely benign (1)
++1 more"	• Amyotrophic lateral sclerosis type 6	1.0	-33.0	6	1	1	34.0
+KIT	oncogene	Benign/Likely benign (1)	"• Mastocytosis
+• Gastrointestinal stromal tumor
+• Piebaldism"	0.0	-32.0	1	1	1	32.0
+PHOX2B	TSG	Uncertain significance (1)	"• Congenital central hypoventilation
+• Neuroblastoma
+• susceptibility to
+• 2"	0.0	-32.0	1	1	1	32.0
+MYH11	fusion	Benign (1)	"• Aortic aneurysm
+• familial thoracic 4"	0.0	-32.0	1	1	1	32.0
+TSC2	TSG	"Uncertain significance (3)
+Benign/Likely benign (1)"	"• Tuberous sclerosis syndrome
+• Lymphangiomyomatosis
+• Isolated focal cortical dysplasia type II
+• Tuberous sclerosis 2"	0.0	-32.0	4	1	1	32.0
+BARD1	TSG	Benign (1)	"• Familial cancer of breast
+• Hereditary breast ovarian cancer syndrome
+• Hereditary cancer-predisposing syndrome"	0.0	-30.0	1	1	1	30.0
+NBN	TSG	"Likely benign (5)
+Benign (2)
+Conflicting classifications of pathogeni… (1)"	"• Hereditary cancer-predisposing syndrome
+• Microcephaly
+• normal intelligence and immunodeficiency"	0.0	-30.0	8	1	1	30.0
+CRNKL1	—	Uncertain significance (1)	—	0.0	-30.0	1	1	1	30.0
+DICER1	TSG	"Benign (1)
+Uncertain significance (1)"	• DICER1-related tumor predisposition	0.0	-26.0	2	1	1	26.0
+ANK1	—	Uncertain significance (1)	"• Hereditary spherocytosis type 1
+• Spherocytosis"	0.0	-26.0	1	1	1	26.0
+TFPT	fusion	Likely benign (1)	"• Retinitis Pigmentosa
+• Dominant"	0.0	-26.0	1	2	1	26.0
